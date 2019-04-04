@@ -4,6 +4,7 @@
   "description": "Un genre de test de personnalité déjanté et délirant  mais fait avec serieux tout de même",
   "main": "start",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "test"
   },
   "repository": {
@@ -11,5 +12,13 @@
     "url": "faire_part"
   },
   "author": "Pierre",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-generator": "^4.16.0",
+    "install": "^0.12.2",
+    "lint": "^1.1.2",
+    "nodemon": "^1.18.10",
+    "pug": "^2.0.3"
+  }
 }

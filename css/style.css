@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(255, 255, 255);
+    /* background-image: url('https://atelier808.fr/14-tm_thickbox_default/plan-architecture.jpg') */
+    /* background-image: url('https://www.ville-de-chauray.fr/images/articles/plan-en-rouleau.jpg'); */
+
+}
+
+#page {
+    padding: 1%;
+    margin: 2% auto 5px;
+    width: 900px;
+    border-radius: 5px;
+    background-color: #ffeed5;
+}
+
+.intro {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.intro p {
+    font-style: italic;
+    padding: 2px;
+    text-align: justify;
+    margin-bottom: 1%;
+}
+
+.intro button {
+    margin: 1% 0 0 44%;
+    padding: 6px;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+ul li {
+    margin: 4px 0 4px 0;
+    padding: 8px;
+}
+
+ul li:hover {
+    cursor: grab;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: inset #000000ad 0px 0px 5px;
+    transition: 0.5s all;
+}
+
+ul li:visited,
+ul li:active,
+ul li:focus {
+    border-radius: 5px;
+    background-color: rgb(218, 218, 218);
+    box-shadow: inset rgba(0, 0, 0, 0.719) 0px 0px 12px;
+}
+
+
+ul li:hover~li,
+ul li:hover :has(li) {
+    border-radius: 5px;
+    opacity: 0.4;
+    transition: 0.5s all;
+}
+
+ul li:not(:hover) {
+    transition: 0.5s all;
+}
+
+footer p {
+    padding: 1%;
+    color: grey;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    font-size: 0.7rem;
+}

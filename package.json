@@ -1,0 +1,15 @@
+{
+  "name": "faire-part",
+  "version": "1.0.0",
+  "description": "Un genre de test de personnalité déjanté et délirant  mais fait avec serieux tout de même",
+  "main": "start",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "faire_part"
+  },
+  "author": "Pierre",
+  "license": "ISC"
+}

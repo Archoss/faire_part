@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var start = document.getElementById('start');
 
+    function showStuff(id) {
+        document.getElementById(id).style.display = 'block'
+    }
+    function hideStuff(id) {
+        document.getElementById(id).style.display = 'none'
+    }
     ////////////////////////////////
     //   -- DISPLAY & SCORES --   //
     ////////////////////////////////
@@ -213,8 +219,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ///////////////////////
     start.addEventListener('click', function () {
         // console.log('START')
-        document.getElementById('askOne').style.display = "block";
-        start.style.display = "none";
+        showStuff('askOne')
+        hideStuff('start')
         askOne = true;
     })
     ///////////////////////
@@ -789,6 +795,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
             obj.fin.finVegan.style.display = "none";
             obj.fin.finRevolte.style.display = "none";
             obj.fin.finBouffe.style.display = "none";
+        } else if (totalBouffe == totalRevolte) {
+            console.log('EGALITE ENTRE TOTALBOUFFE ET TOTALREVOLTE')
+            // document.getElementById('equalImg').style.display = "block";
+        } else if (totalBouffe == totalAlcool) {
+            console.log('EGALITE ENTRE TOTALBOUFFE ET TOTALALCOOL')
+        } else if (totalBouffe == totalVegan) {
+            console.log('EGALITE ENTRE TOTALBOUFFE ET TOTALVEGAN')
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////////

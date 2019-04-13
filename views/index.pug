@@ -244,7 +244,7 @@ html(lang='fr')
         h3 CONCLUSION :
         ul
           li#finBouffe.choice.finBouffe
-            img.rebel(src="static/img/bouffe.gif", alt="rebel")
+            img(src="static/img/bouffe.gif", alt="rebel")
             p
               | Vous êtes un vrai gourmet pour ne pas dire un goinfre. C'est avec grand plaisir que Fabrice et
               | Agathe feteront avec vous leur mariage sous réserve que vous laissiez un peu à manger aux autres
@@ -252,7 +252,7 @@ html(lang='fr')
               | décoration fleural ni les tenues des mariés un peu de respect tout de même !!! Apprenez à contrôler
               | vos appétits car bien que tout puisse sembler appétissant, tout ne ce mange pas !
           li#finRevolte.choice.finRevolte
-            img.rebel(src="static/img/rebel.gif", alt="rebel")
+            img(src="static/img/rebel.gif", alt="rebel")
             p
               | Vous êtes un éternel révolté et c'est avec plaisir que Fabrice et Agathe disserteront avec vous de
               | tous ces complots à démasquer et toutes ces révolutions à engagées. Sous réserves toutefois, que
@@ -261,7 +261,7 @@ html(lang='fr')
               | Vouloir faire changer le monde c'est bien mais gardez une place de choix à vos amis dans le nouvel
               | ordre mondial que vous tentez d'instaurer
           li#finVegan.choice.finVegan
-            img.rebel(src="static/img/vegan.gif", alt="rebel")
+            img(src="static/img/vegan.gif", alt="rebel")
             p
               | Oh malheureux bobo vegan, si une invitation vous est parvenu c'est que vous avez une place dans les
               | cœurs de Fabrice et Agathe, toutefois vous risquez d'être bien malheureux si vos convictions ne
@@ -269,21 +269,57 @@ html(lang='fr')
               | de ferme non certifié bio et pouvant présenté des traces de gluten. Il vous reste un peu de temps
               | pour retrouver vos esprits afin de parvenir à passer un bon moment avec les mariés
           li#finAlcool.choice.finAlcool
-            img.rebel(src="static/img/alcool.gif", alt="rebel")
+            img(src="static/img/alcool.gif", alt="rebel")
             p
               | Aventurier alcoolique vous avez probablement côtoyé les deux tourtereaux lors d'une de leurs
               | nombreuses soirées de débauches. Il va de soit qu'ils seront des plus heureux que vous soyez à leur
               | coté. Alors s'il vous plait veillez au grain car les mariés n'ont pas commandé de coma éthylique
               | entre les fromage et la pièce montée de plus aucun des deux n'a son brevet de secourisme ! Festif un
               | jour, festif toujours on compte bel et bien sur votre présence.
-          //- li#finEqual.choice.finEqual
-          //-   img.rebel(src="static/img/alcool.gif", alt="rebel")
-          //-   p
-          //-   | Aventurier alcoolique vous avez probablement côtoyé les deux tourtereaux lors d'une de leurs
-          //-   | nombreuses soirées de débauches. Il va de soit qu'ils seront des plus heureux que vous soyez à leur
-          //-   | coté. Alors s'il vous plait veillez au grain car les mariés n'ont pas commandé de coma éthylique
-          //-   | entre les fromage et la pièce montée de plus aucun des deux n'a son brevet de secourisme ! Festif un
-          //-   | jour, festif toujours on compte bel et bien sur votre présence.
-            
+          li#finBouffeRevolte.choice.finBouffeRevolte
+            img(src="static/img/wtf.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte]
+          li#finBouffeVegan.choice.finBouffeVegan
+            img(src="static/img/indécis.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Vegan]
+          li#finBouffeAlcool.choice.finBouffeAlcool
+            img(src="static/img/indécis2.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Alcool]
+
+          li#finVeganRevolte.choice.finVeganRevolte
+            img(src="static/img/indécis2.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Revolte]
+          li#finVeganAlcool.choice.finVeganAlcool
+            img(src="static/img/indécis2.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Alcool]
+
+          li#finRevolteAlcool.choice.RevolteAlcool
+            img(src="static/img/indécis2.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Revolte - Alcool]
+
+          li#finBouffeVeganAlcool.choice.finBouffeVeganAcool
+            img(src="static/img/wtf.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Vegan - Alcool]
+          li#finBouffeRevolteAlcool.choice.finBouffeRevolteAlcool
+            img(src="static/img/wtf.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte - Alcool]
+          li#finBouffeRevolteVegan.choice.finBouffeRevolteVegan
+            img(src="static/img/wtf.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte - Vegan]
+
+          li#finVeganAlcoolRevolte.choice.finVeganAlcoolRevolte
+            img(src="static/img/wtf.gif", alt="wtf")
+            p
+            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Alcool - Revolte]
+      a#reset(href="http://localhost:3000") Relancer
     footer
       p - Tous droits confondus approuvu, lu, et urluberlu par Pierre -

@@ -209,7 +209,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             finVeganScore: 0,
             finAlcool: document.getElementById('finAlcool'),
             finAlcoolEtat: false,
-            finAlcoolScore: 0
+            finAlcoolScore: 0,
+
+            finBouffeRevolte: document.getElementById('finBouffeRevolte'),
+            finBouffeVegan: document.getElementById('finBouffeVegan'),
+            finBouffeAlcool: document.getElementById('finBouffeAlcool'),
+
+            finVeganRevolte: document.getElementById('finVeganRevolte'),
+            finVeganAlcool: document.getElementById('finVeganAlcool'),
+
+            finRevolteAlcool: document.getElementById('finRevolteAlcool'),
+
+            finBouffeRevolteAlcool: document.getElementById('finBouffeRevolteAlcool'),
+            finBouffeRevolteVegan: document.getElementById('finBouffeRevolteVegan'),
+            finBouffeVeganAlcool: document.getElementById('finBouffeVeganAlcool'),
+            finVeganAlcoolRevolte: document.getElementById('finVeganAlcoolRevolte')
         }
     }
     /////////////////////
@@ -767,7 +781,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ////  ---  SI TOTAL BOUFFE EST LE PLUS GROS SCORE  ---  ////
             console.log("Vous mangez trop !")
             console.log("totalBouffe ", totalBouffe)
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+            // ----------------------------------------------------------------------------
             obj.fin.finBouffe.style.display = "block";
+            // ----------------------------------------------------------------------------
             obj.fin.finRevolte.style.display = "none";
             obj.fin.finVegan.style.display = "none";
             obj.fin.finAlcool.style.display = "none";
@@ -775,7 +803,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ////  ---  SI TOTAL REVOLTE EST LE PLUS GROS SCORE  ---  ////
             console.log("Vous vous révoltez trop !")
             console.log("totalRevolte ", totalRevolte)
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+            // ----------------------------------------------------------------------------
             obj.fin.finRevolte.style.display = "block";
+            // ----------------------------------------------------------------------------
             obj.fin.finBouffe.style.display = "none";
             obj.fin.finVegan.style.display = "none";
             obj.fin.finAlcool.style.display = "none";
@@ -783,7 +825,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ////  ---  SI TOTAL VEGAN EST LE PLUS GROS SCORE  ---  ////
             console.log("Vous êtes trop vegan !")
             console.log("totalVegan ", totalVegan)
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+            // ----------------------------------------------------------------------------
             obj.fin.finVegan.style.display = "block";
+            // ----------------------------------------------------------------------------
             obj.fin.finRevolte.style.display = "none";
             obj.fin.finBouffe.style.display = "none";
             obj.fin.finAlcool.style.display = "none";
@@ -791,17 +847,244 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ////  ---  SI TOTAL ALCOOL EST LE PLUS GROS SCORE  ---  ////
             console.log("Vous êtes trop alcoolique !")
             console.log("totalAlcool ", totalAlcool)
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+            // ----------------------------------------------------------------------------
             obj.fin.finAlcool.style.display = "block";
+            // ----------------------------------------------------------------------------
             obj.fin.finVegan.style.display = "none";
             obj.fin.finRevolte.style.display = "none";
             obj.fin.finBouffe.style.display = "none";
-        } else if (totalBouffe == totalRevolte) {
-            console.log('EGALITE ENTRE TOTALBOUFFE ET TOTALREVOLTE')
-            // document.getElementById('equalImg').style.display = "block";
-        } else if (totalBouffe == totalAlcool) {
-            console.log('EGALITE ENTRE TOTALBOUFFE ET TOTALALCOOL')
-        } else if (totalBouffe == totalVegan) {
-            console.log('EGALITE ENTRE TOTALBOUFFE ET TOTALVEGAN')
+        } else if ((totalBouffe == totalRevolte) && (totalBouffe > totalVegan) && (totalBouffe > totalAlcool)) {
+            console.log('EGALITE ENTRE BOUFFE ET REVOLTE')
+            // #######################################################
+            // ################ BOUFFE ET REVOLTE ####################
+            obj.fin.finBouffeRevolte.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalBouffe == totalAlcool) && (totalBouffe > totalVegan) && (totalBouffe > totalRevolte)) {
+            console.log('EGALITE ENTRE BOUFFE ET ALCOOL')
+            // ######################################################
+            // ################ BOUFFE ET ALCOOL ####################
+            obj.fin.finBouffeAlcool.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalBouffe == totalVegan) && (totalBouffe > totalAlcool) && (totalBouffe > totalRevolte)) {
+            console.log('EGALITE ENTRE BOUFFE ET VEGAN')
+            // #####################################################
+            // ################ BOUFFE ET VEGAN ####################
+            obj.fin.finBouffeVegan.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalVegan == totalRevolte) && (totalVegan > totalAlcool) && (totalVegan > totalBouffe)) {
+            console.log('EGALITE ENTRE VEGAN ET REVOLTE')
+            // #####################################################
+            // ################ VEGAN ET REVOLTE ###################
+            obj.fin.finVeganRevolte.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalVegan == totalAlcool) && (totalVegan > totalRevolte) && (totalVegan > totalBouffe)) {
+            console.log('EGALITE ENTRE VEGAN ET ALCOOL')
+            // #####################################################
+            // ################ VEGAN ET ALCOOL ####################
+            obj.fin.finVeganAlcool.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+            obj.fin.finRevolteAlcool.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalRevolte == totalAlcool) && (totalRevolte > totalVegan) && (totalRevolte > totalBouffe)) {
+            console.log('EGALITE ENTRE REVOLTE ET ALCOOL')
+            // #####################################################
+            // ################ REVOLTE ET ALCOOL ####################
+            obj.fin.finRevolteAlcool.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalBouffe == totalVegan) && (totalBouffe == totalAlcool) && (totalBouffe > totalRevolte)) {
+            console.log('EGALITE ENTRE BOUFFE, VEGAN ET ALCOOL')
+            // #############################################################
+            // ################ BOUFFE, VEGAN ET ALCOOL ####################
+            obj.fin.finRevolteAlcool.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+
+            obj.fin.finBouffeVeganAlcool.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalBouffe == totalVegan) && (totalBouffe == totalRevolte) && (totalBouffe > totalAlcool)) {
+            console.log('EGALITE ENTRE BOUFFE, REVOLTE ET VEGAN')
+            // ##############################################################
+            // ################ BOUFFE, REVOLTE ET VEGAN ####################
+            obj.fin.finRevolteAlcool.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+
+            obj.fin.finBouffeRevolteVegan.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalBouffe == totalAlcool) && (totalBouffe == totalRevolte) && (totalBouffe > totalVegan)) {
+            console.log('EGALITE ENTRE BOUFFE, REVOLTE ET ALCOOL')
+            // #############################################################
+            // ################ BOUFFE, REVOLTE ET ALCOOL ##################
+            obj.fin.finRevolteAlcool.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+
+            obj.fin.finBouffeRevolteAlcool.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finVeganAlcoolRevolte.style.display = "none";
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
+        } else if ((totalVegan == totalAlcool) && (totalVegan == totalRevolte) && (totalVegan > totalBouffe)) {
+            console.log('EGALITE ENTRE VEGAN, ALCOOL ET REVOLTE')
+            // #########################################################################################
+            // ################ EGALITE ENTRE EGALITE ENTRE VEGAN, ALCOOL ET REVOLTE ###################
+            obj.fin.finRevolteAlcool.style.display = "none";
+            obj.fin.finVeganAlcool.style.display = "none";
+            obj.fin.finVeganRevolte.style.display = "none";
+            obj.fin.finBouffeVegan.style.display = "none";
+            obj.fin.finBouffeAlcool.style.display = "none";
+            obj.fin.finBouffeRevolte.style.display = "none";
+
+            obj.fin.finVeganAlcoolRevolte.style.display = "block";
+            // ----------------------------------------------------------------------------
+            obj.fin.finBouffeRevolteVegan.style.display = "none";
+            obj.fin.finBouffeVeganAlcool.style.display = "none";
+            obj.fin.finBouffeRevolteAlcool.style.display = "none";
+
+
+            obj.fin.finAlcool.style.display = "none";
+            obj.fin.finVegan.style.display = "none";
+            obj.fin.finRevolte.style.display = "none";
+            obj.fin.finBouffe.style.display = "none";
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////////

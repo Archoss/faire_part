@@ -18,7 +18,7 @@ html(lang='fr')
         p
           | Mais l’avez-vous mérité ?
         p
-          | Pour le savoir, répondez à ces quelques questions, ça ne sera pas long !
+          | Pour le savoir, répondez à ces quelques questions en cliquant sur la réponse qui vous correspond le mieux
         button#start  C'est parti !
       // //////////  QUESTIONNAIRE  //////////
       // ///   1   ///
@@ -320,6 +320,6 @@ html(lang='fr')
             img(src="static/img/wtf.gif", alt="wtf")
             p
             | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Alcool - Revolte]
-      a#reset(href="http://localhost:3000") Relancer
+      a#reset.reset(href="javascript:window.location.reload()") Relancer
     footer
       p - Tous droits confondus approuvu, lu, et urluberlu par Pierre -

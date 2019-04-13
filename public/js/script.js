@@ -236,6 +236,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         showStuff('askOne')
         hideStuff('start')
         askOne = true;
+        showStuff('reset')
     })
     ///////////////////////
 

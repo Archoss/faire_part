@@ -4,11 +4,12 @@
 
 body {
     min-height: 944px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto Slab', serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     /* background-color: rgb(255, 255, 255); */
     background: linear-gradient(white, #8b8b8b);
     background-position: center;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* background-image: url('https://atelier808.fr/14-tm_thickbox_default/plan-architecture.jpg') */
     /* background-image: url('https://www.ville-de-chauray.fr/images/articles/plan-en-rouleau.jpg'); */
 
@@ -34,11 +35,11 @@ body {
     text-align: center;
 }
 
-.intro button {
+button {
     cursor: pointer;
-    margin: 1% 0 0 44%;
+    margin: 2% 0 1% 44%;
     background-color: #ffb724;
-    padding: 10px;
+    padding: 6px 15px;
     border: none;
     border-radius: 4px;
     text-transform: uppercase;
@@ -46,14 +47,29 @@ body {
     box-shadow: rgba(122, 82, 0, 0.69) 2px 2px 10px 0px;
 }
 
-.intro button:hover{
+button:hover{
     background-color: #ffaa00;
     box-shadow: none;
     transition: all 0.5s;
 }
+
+.header{
+    background-color: #ffffff66;
+    border-radius: 40px;
+    margin: 1%;
+    box-shadow: #ffffffb8 0px 0px 30px 5px;
+
+}
 h1,
-h2,
-h3 {
+h2{
+    color: #ffc900;
+    text-shadow: #000000 -2px 2px 4px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+h3{
+    font-weight: bold;
     text-align: center;
     padding: 20px;
 }
@@ -65,13 +81,14 @@ ul li {
 }
 img{
     height: 220px;
-    margin-left: 33%;
+    margin-left: 28%;
+    margin-bottom: 2%;
     list-style: none;
     text-align: center;
 }
 ul li:hover {
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: #ffdc81;
     box-shadow: inset #000000ad 0px 0px 5px;
     transition: 0.5s all;
 }
@@ -114,21 +131,27 @@ ul li:not(:hover) {
 
 .reset{
     display: none;
-    margin: 5% auto 0px;
+    margin: 6% auto 0px;
     width: min-content;
     color: rgba(255, 255, 255, 0.91);
     cursor: pointer;
     letter-spacing: 1px;
-    background-color: #7979794d;
+    background-color: #7979793a;
     padding: 3px 8px 3px 8px;
     border: none;
     border-radius: 8px;
     text-transform: uppercase;
     text-decoration: none;
-    text-shadow: black 1px 0px 4px;
+    text-shadow: rgba(0, 0, 0, 0.74) 1px 0px 4px;
     font-weight: bold;
     font-size: 0.6rem;
     box-shadow: inset rgb(0, 0, 0) 0px 0px 6px 0px;
+}
+.reset:hover{
+    color: rgb(255, 255, 255);
+    background-color: #747474c2;
+    text-decoration: none;
+    transition: all 0.25s;
 }
 footer p {
     padding: 1%;

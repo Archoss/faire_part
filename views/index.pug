@@ -4,322 +4,327 @@ html(lang='fr')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    link(rel="stylesheet", href="static/css/style.css")
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Slab", rel="stylesheet")
     script(src='static/js/script.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+    link(rel="stylesheet", href="static/css/style.css")
     title Faire-Part
   body
-    #page
-      h1 Avez vous vraiment mérité votre gigot bitume ?
-      h2 Ou quel type d'invités êtes vous vraiment ?
-      .intro
-        p
-          | Agathe et Fabrice vous ont invités à venir le 6 juillet, vers 17h, à la ferme du Cardonnet à Pont
-          | Saint Pierre 
-        p
-          | Mais l’avez-vous mérité ?
-        p
-          | Pour le savoir, répondez à ces quelques questions en cliquant sur la réponse qui vous correspond le mieux
+    container
+      #page
+        .header  
+          h1 Avez vous vraiment mérité votre gigot bitume ?
+          h2 Ou quel type d'invités êtes vous vraiment ?
+          .intro
+            p
+              | Agathe et Fabrice vous ont invités à venir le 6 juillet, vers 17h, à la ferme du Cardonnet à Pont
+              | Saint Pierre 
+            p
+              | Mais l’avez-vous mérité ?
+            p
+              | Pour le savoir, répondez à ces quelques questions en cliquant sur la réponse qui vous correspond le mieux
         button#start  C'est parti !
-      // //////////  QUESTIONNAIRE  //////////
-      // ///   1   ///
-      #askOne.askOne
-        h3 1. L'intérêt du gigot bitume selon vous :
-        ul
-          li#aRevolte.choice.aRevolte
-            | Voir des hommes du BTP s'activer docilement aux fourneaux !!! Font ils aussi la
-            | vaisselle ? Tablier et chaussures de chantier, un style qui ne vous a jamais laissé de
-            | marbre !
-          li#aBouffe.choice.aBouffe
-            | Cette couche noire qui croustille sous la dente apportant une touche "gourmand
-            | croquant" à la Cyril Lignac, avec une touche d'Espelette c'est encore mieux !
-          li#aAlcool.choice.aAlcool
-            | Manipuler du bitume liquéfié à plus de 230°C entouré d'un groupe d'olibrius plus
-            | qu'imbibé lancé danse une dans de la chenille endiablée. L'amour du risque quoi !
-          li#aVegan.choice.aVegan
-            | La salade de jeunes pousses, la jardinière de légumes anciens, les crackers de
-            | soja et le smoothie goyave/rutabaga/fenouil plein d'antioxydants... La viande s'est
-            | définitivement passé de mode !
-      // ///   2   ///
-      #askTwo.askTwo
-        h3
-          | 2. La fin du monde est imminente! Vous êtes coincés à l'abri d'un bunker avec Fabrice et Agathe. Vous
-          | avez pensé à prendre l'indispensable :
-        ul
-          li#bVegan.choice.bVegan
-            | Le DVD de l'intégral des shows nocturnes de danse contemporaine-abstraite de Arte et deux kilos de
-            | baies de Goji. Un esprit sain dans un corps sain ! Hâte de sortir de ce bunker pour vous lancer dans
-            | la culture raisonnée de tubercule bio sans gluten et d'expérimenter votre danse de la pluie et votre
-            | dialogue végétal à sens unique.
-          li#bRevolte.choice.bRevolte
-            | Votre premier jet du manifeste du nouveau monde. Afin d'assurer votre futur proche de dictateur
-            | révolutionnaire rien de tel qu'un bon règlement. Abat les voiture, les vélos, la fourrure, les
-            | leggings, Maitre Gims, la zumba, les odeurs corporels... Bref Abat la race humaine telle est notre
-            | seule issue !
-          li#bBouffe.choice.bBouffe
-            | La bible des 100 meilleurs recettes post apocalyptique comprenant: la cuisse de pote rôtie au miel,
-            | le cromesquis de sciure de bois aux graviers, la soupe de résidus radioactifs et surtout le best
-            | seller "initiation au cannibalisme non létal pour les nuls"
-          li#bAlcool.choice.bAlcool
-            | Un canon à plasma biphasé, un poignard double lame de la légion étrangère, quelques grenades, un kit
-            | "Je fais mon cocktail Molotov maison" et une vingtaine de futs de Calva (ça réchauffe et ça
-            | cautérise!). On nous parle de fin du monde mais qui sait ce qui nous attend dehors !
-      // ///   3   ///
-      #askThree.askThree
-        h3 3. Pour vous le mariage c'est :
-        ul
-          li#cBouffe.choice.cBouffe
-            | L'occasion d'un repas gargantuesque en 35 services dont terrines et autres pasticeries (type
-            | oreiller de la belle aurore), rôtis en tout genre (cannette, poule faisane, paon, cygne... si ça
-            | existe c'est que ca se mange !), entremet à gogo, poissons de toutes origines, fromages (qui puent
-            | de
-            | préférence) et douceur. Un menu digne de Monsieur Escoffier. Pantalon déboutonnable ou à ceinture
-            | élastique de rigueur de rigueur !
-          li#cRevolte.choice.cRevolte
-            | Un symbole consumériste imposant aux moutons que nous sommes de dépenser outre mesure en vue de
-            | rentrer de force dans les cases imposées des questionnaires administratifs. Une fete avilissante
-            | glorifiant une société qui nie toute individualité. Ce n'est pas demain la veille que vous vous
-            | plierez à ce genre d'absurdité !
-          li#cVegan.choice.cVegan
-            | L'occasion d'exhiber la dernière création 100% vegan de Dianne Klothilde (Avec deux N et un
-            | K !!!)votre amie styliste avant-gardiste qui a dessiné une collection spéciale cérémonie en fibre de
-            | soja et cuir synthétique ! Avoir la classe tout en faisant changer le monde tel est votre fer de
-            | lance!
-          li#cAlcool.choice.cAlcool
-            | Alcool, Alcool et Alcool ! Et pourquoi pas un limbo sous un bâton enflammé, rien de tel pour marquer
-            | une occasion mémorable et briser la glace avec des inconnus.
-      // ///   4   ///
-      #askFour.askFour
-        h3
-          | 4. Vous attendez désespérément Fabrice et Agathe, après quelques appels infructueux ils vous envois un
-          | message: "On arrive, désolé, bloqué dans les bouchons...". Vous pensez :
-        ul
-          li#dRevolte.choice.dRevolte
-            | Hidalgo et ses potes les néo-bobo-écolo auront notre perte! 2h30 que vos deux acolytes sont en
-            | chemin pourtant ils vous avaient bien dit n'être qu'à 1km de votre lieu de rencontre !!! Tous dans
-            | la
-            | rue, Honte aux politiques en place qui ne nous veulent que du mal !
-          li#dVegan.choice.dVegan
-            | Si seulement ces deux abrutis c'étaient mis au vélo ou encore mieux au jogging, ils seraient arrivés
-            | depuis belle lurette ! Dès qu'ils seront là vous ne manquerez pas de les persuader des bienfaits de
-            | ce type d'exercice et peut être même de les initier au yoga biologico-physiologique dernière
-            | tendance dans la capitale.
-          li#dAlcool.choice.dAlcool
-            | Heu... bouchons de calva ou de château Margaux ? Vous n'êtes pas dupe les retards de plus de deux
-            | heures ne peuvent être causés que par du liège! Heureusement vous êtes vous même en compagnie de ce
-            | type de chose, ça aide à passer le temps !
-          li#dBouffe.choice.dBouffe
-            | Parfait! Vous recommandez en urgence une planche charcuterie/fromage avant que ces deux goinfre
-            | n'arrivent pour vous ôter la nourriture de la bouche. Partagez c'est bien mais manger c'est mieux !
-            | Les plaisirs solitaires y a que ca de vrai.
-      // ///   5   ///
-      #askFive.askFive
-        h3 5. Les enfants ça vous inspire :
-        ul
-          li#eVegan.choice.eVegan
-            | Ne sommes nous pas déjà bien assez nombreux sur cette fichue planète à bout de souffle !!! Quel
-            | égoïsme que de céder à la tentation de créer un sur-consommateur supplémentaire ! Vous ne vous
-            | attendrirez à son égard que si on le prénomme jonquille ou topinambour et qu'on le nourri
-            | exclusivement le lait de soja et d'amande !
-          li#eAlcool.choice.eAlcool
-            | La vente à la découpe, y a que ca de vrai! D'un petit corps qui n'a presque pas servi on devrait
-            | pouvoir tirer un bon prix sur le darknet ! C'est le début de la richesse ! Mais vous n'êtes pas
-            | chien, un œil acheté, un œil offert et pour tout rein vendu on offre la bouteille de Calva !
-          li#eBouffe.choice.eBouffe
-            | Vous adorez l'agneau de lait et comme il ne faut pas mourir idiot une magnifique recette vient de
-            | poindre dans votre esprit, cuissot de nourrisson confit aux herbes et côtelettes de nouveau né
-            | grillées à la plancha! Michelin n'a qu'a bien se tenir la révolution de la gastronomie contemporaine
-            | pointe le bout de son nez !
-          li#eRevolte.choice.eRevolte
-            | La révolution est en marche! Un petit être malléable que l'on pourra entrainer afin qu'il ne tombe
-            | pas dans les travers de cette société perfide. Pas de prénom! On le laissera en choisir un quand il
-            | atteindra l'âge nécessaire. Il en va de même pour son genre: garçon, fille, androgyne ou elfe
-            | démoniaque il sera bien assez tôt pour qu'il choisisse son camp.
-      // ///   6   ///
-      #askSix.askSix
-        h3 6. Votre dessin animé préféré :
-        ul
-          li#fBouffe.choice.fBouffe
-            | Ratatouille sans hésitation !!! Les plaisirs de la bouche avant tout et l'initiation gustative dès
-            | le plus jeune âge sont votre mantra. On est jamais trop jeune pour apprendre à maitriser la cuisson
-            | du gigot de sept heures et des ris de veaux meunières. D'ailleurs vous même avez concoctez vos
-            | premiers œufs meurettes à 4ans et demi sur votre mini-cuisinière/dinette, rien de bien sorcier !
-          li#fVegan.choice.fVegan
-            | Vous vous rêvez Pocahontas, personnage avant-gardiste et surtout écolo avant l'heure chantant "l'air
-            | du vent" à tue-tête et parlant aux esprits de la foret! Toutefois la petite Lisa Simpson,
-            | végétarienne et fervente défenseuse de la nature et des animaux rentre aussi dans votre top 3
-          li#fAlcool.choice.fAlcool
-            | Asterix et Obélix! Boire et se battre voilà une routine qui parle à votre cœur. Y a pas à dire les
-            | gaulois savaient vivre. En plus vous adorez les moustaches !
-          li#fRevolte.choice.fRevolte
-            | Vous détestez les dessin animé et contes pour enfant! Entre la belle aux bois dormant qui prône le
-            | quasi viol d'une pauvre jouvencelle endormie, la belle et la bête encourageant à la zoophilie,
-            | Cendrillon ou l'asservissement forcé d'une jeune fille vouée à rester une bonniche ad vitam aeternam
-            | sans son sauveteur providentiel, blanche neige en femme de ménage sous le joug d'une bande de nain
-            | lubrique... Pas de ça chez vous
-      // ///   7   ///
-      #askSeven.askSeven
-        h3
-          | 7. Fabrice et Agathe sont en panne d'inspiration, ils compte sur vous pour organiser les vacances de cet
-          | été! Vous débordez d'idée très précise car pour vous la garantie de vacances réussies c'est :
-        ul
-          li#gVegan.choice.gVegan
-            | Pour de vrai vacances un retour aux sources est nécessaire. Direction le Larzac dans la première
-            | laiterie-fromagerie vegan, fabricaton et dégustation sont au programme pour votre plus grand
-            | plaisir. En soirée débat introspectif avec un troupeau de chèvre enfin libre de gérer son lait et sa
-            | laine comme bon lui semble.
-          li#gRevolte.choice.gRevolte
-            | Des vacances engagées y a que ca de vrai. Le mausolée du Che Guevara à Cuba avec un bon cigare, puis
-            | direction pékin pour un sitting place Tian'anmen. Ensuite une manifestation avec les femens histoire
-            | de s'activer un peu ! Et une reconstitution de la révolution française avec atelier guillotine, puis
-            | escape game de la prise de la bastille. On finit avec une soirée discothèque dress code mai 68 et
-            | activité lancé de pavés !
-          li#gBouffe.choice.gBouffe
-            | Guide Michelin en main un road trip gastronomique vous attend ! Un brunch 3 étoiles pour commencer
-            | du bon pied, puis vadrouille vers des déjeuners et diners chez Joël Robuchon (et sa purée de ratte),
-            | Tierry Marx (et son risotto de soja aux huitres), Pierre Gagnaire (pour sa cuisine de sentiment),
-            | Alain Ducasse (malgré sa tête de con), Marc Veyrat (et son yaourt au foie gras) Alain Passard (et sa
-            | liche grillée), Yannick Alléno (et ses œufs parfaits), George Blanc (et son homard bleu au vn
-            | jaune). Puis pour conclure en beauté direction quelque part à Shangaï pour un diner à l'Ultraviolet
-            | de Paul Pairet au menu 20 plats avec lumières, sons, musiques, projections images et sensations.
-          li#gAlcool.choice.gAlcool
-            | Ici aventure et frisson sont au rendez-vous sur fond de route des vins, thématiques oblige et la
-            | météo estivale donnant souvent soif. Paint ball et lasergame tous les matins. Concours de levé de
-            | coude à l'apéro puis barbecue de mise tous les midis avec trous normands imposés. Pour bien digérer
-            | un petit parcours du combattant dont seul les vrais de vrais ont le secret sera organiser après le
-            | pousse café.
-      // ///   8   ///
-      #askEight.askEight
-        h3 8. Un mot pour vous définir :
-        ul
-          li#hRevolte.choice.hRevolte
-            | Séditieux
-          li#hBouffe.choice.hBouffe
-            | Hédoniste
-          li#hAlcool.choice.hAlcool
-            | Baroudeur
-          li#hVegan.choice.hVegan
-            | Naturophile
-      // ///   9   ///
-      #askNine.askNine
-        h3 9. ρ(∂v∂t+v.∇v)=−∇p+∇.T+f :
-        ul
-          li#iAlcool.choice.iAlcool
-            | L’ascension de l’humanité (l’équation de Navier-Stokes), après quelque verres vous avez toujours été
-            | un pro en mécanique des fluides et tout particulièrement cette formule décrivant le mouvement des
-            | fluides newtoniens !!! Y a pas à dire les fluides (quel qu'ils soient) ça vous connait.
-          li#iRevolte.choice.iRevolte
-            | C'est évident cette formule cache tout bonnement le plus grand complot mondial visant à nous
-            | lobotomiser en insérant des messages subliminaux dans l'ensemble de nos programmes télévisuel et
-            | radiophonique. Encore un coup des illuminatis! Tout ca pour nous empêcher de prendre les armes
-            | contre tous ces dirigeants qui abusent de nous.
-          li#iVegan.choice.iVegan
-            | Ras le bol de ce recours intempestif aux maths et à la physique ! Nous ne sommes pas que des
-            | numéros. Toutes ses formules ne valent rien à coté des vrais problèmes de fond comme la pudeur
-            | exacerbé du mouton qui vient d'être tondu à l'insu de son plein gré, le sentiment d'usurpation de
-            | cette vache laitière qui se voit voler sa production sans son consentement. Et quid de cette carotte
-            | arrachée à son lit de terre bien douillet sans aucune demande préalable !
-          li#iBouffe.choice.iBouffe
-            | Enfin une formule permettant de découper les notes de restos à 25personnes en prenant en compte
-            | l'ensemble des variables ("je n'ai pas pris d'alcool", "moi, je n'ai bu qu'un demi verre", "je n'ai
-            | mangé qu'une tranche de saucisson", "je ne payerai pas l'autre con qui a pris 2 entrées 4 plats,
-            | 3desserts et un digeo", "désolée mais ma salade coutait beaucoup moins cher que le filet de bœuf
-            | wellington de ta pote!", "je n'avais demandé qu'une carafe d'eau et une tomate mozza, tu m'avais
-            | bien dit que ca ne te gênait que je goute la moitié de ton triple cheese-burger supplément
-            | saindoux"...)
-      // ///   10   ///
-      #askTen.askTen
-        h3
-          | 10. Pour conclure, pourquoi comptez vous venir faire la fete avec Fabrice et Agathe le 06 Juillet 2019 ?
-        ul
-          li#jBouffe.choice.jBouffe
-            | Vous les adorez et les trouvez délicieux
-          li#jVegan.choice.jVegan
-            | Vous les adorez et les trouvez trop beaux
-          li#jRevolte.choice.jRevolte
-            | Vous les adorez et seriez prêt à tuer pour eux
-          li#jAlcool.choice.jAlcool
-            | Vous les adorez et les suivriez jusqu'au bout du monde
-      // //////////  CONCLUSIONS  //////////
-      #askFin.askFin
-        h3 CONCLUSION :
-        ul
-          li#finBouffe.choice.finBouffe
-            img(src="static/img/bouffe.gif", alt="rebel")
-            p
-              | Vous êtes un vrai gourmet pour ne pas dire un goinfre. C'est avec grand plaisir que Fabrice et
-              | Agathe feteront avec vous leur mariage sous réserve que vous laissiez un peu à manger aux autres
-              | convives. Pour rappel on ne lèche pas la cuve à bitume une fois le gigot sorti et on ne mange ni la
-              | décoration fleural ni les tenues des mariés un peu de respect tout de même !!! Apprenez à contrôler
-              | vos appétits car bien que tout puisse sembler appétissant, tout ne ce mange pas !
-          li#finRevolte.choice.finRevolte
-            img(src="static/img/rebel.gif", alt="rebel")
-            p
-              | Vous êtes un éternel révolté et c'est avec plaisir que Fabrice et Agathe disserteront avec vous de
-              | tous ces complots à démasquer et toutes ces révolutions à engagées. Sous réserves toutefois, que
-              | vous mettiez un peu de coté votre facette activiste anarchiste afin que vous ne coupiez pas la tête
-              | des mariés avant le dessert et n'organisiez pas non plus de putsch dans le courant de la soirée.
-              | Vouloir faire changer le monde c'est bien mais gardez une place de choix à vos amis dans le nouvel
-              | ordre mondial que vous tentez d'instaurer
-          li#finVegan.choice.finVegan
-            img(src="static/img/vegan.gif", alt="rebel")
-            p
-              | Oh malheureux bobo vegan, si une invitation vous est parvenu c'est que vous avez une place dans les
-              | cœurs de Fabrice et Agathe, toutefois vous risquez d'être bien malheureux si vos convictions ne
-              | changent pas d'ici là. Cauchemars en perspectives face à cette orgie de viande le tout dans un corps
-              | de ferme non certifié bio et pouvant présenté des traces de gluten. Il vous reste un peu de temps
-              | pour retrouver vos esprits afin de parvenir à passer un bon moment avec les mariés
-          li#finAlcool.choice.finAlcool
-            img(src="static/img/alcool.gif", alt="rebel")
-            p
-              | Aventurier alcoolique vous avez probablement côtoyé les deux tourtereaux lors d'une de leurs
-              | nombreuses soirées de débauches. Il va de soit qu'ils seront des plus heureux que vous soyez à leur
-              | coté. Alors s'il vous plait veillez au grain car les mariés n'ont pas commandé de coma éthylique
-              | entre les fromage et la pièce montée de plus aucun des deux n'a son brevet de secourisme ! Festif un
-              | jour, festif toujours on compte bel et bien sur votre présence.
-          li#finBouffeRevolte.choice.finBouffeRevolte
-            img(src="static/img/wtf.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte]
-          li#finBouffeVegan.choice.finBouffeVegan
-            img(src="static/img/indécis.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Vegan]
-          li#finBouffeAlcool.choice.finBouffeAlcool
-            img(src="static/img/indécis2.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Alcool]
+        // //////////  QUESTIONNAIRE  //////////
+        // ///   1   ///
+        #askOne.askOne
+          h3 1. L'intérêt du gigot bitume selon vous :
+          ul
+            li#aRevolte.choice.aRevolte
+              | Voir des hommes du BTP s'activer docilement aux fourneaux !!! Font ils aussi la
+              | vaisselle ? Tablier et chaussures de chantier, un style qui ne vous a jamais laissé de
+              | marbre !
+            li#aBouffe.choice.aBouffe
+              | Cette couche noire qui croustille sous la dente apportant une touche "gourmand
+              | croquant" à la Cyril Lignac, avec une touche d'Espelette c'est encore mieux !
+            li#aAlcool.choice.aAlcool
+              | Manipuler du bitume liquéfié à plus de 230°C entouré d'un groupe d'olibrius plus
+              | qu'imbibé lancé danse une dans de la chenille endiablée. L'amour du risque quoi !
+            li#aVegan.choice.aVegan
+              | La salade de jeunes pousses, la jardinière de légumes anciens, les crackers de
+              | soja et le smoothie goyave/rutabaga/fenouil plein d'antioxydants... La viande s'est
+              | définitivement passé de mode !
+        // ///   2   ///
+        #askTwo.askTwo
+          h3
+            | 2. La fin du monde est imminente! Vous êtes coincés à l'abri d'un bunker avec Fabrice et Agathe. Vous
+            | avez pensé à prendre l'indispensable :
+          ul
+            li#bVegan.choice.bVegan
+              | Le DVD de l'intégral des shows nocturnes de danse contemporaine-abstraite de Arte et deux kilos de
+              | baies de Goji. Un esprit sain dans un corps sain ! Hâte de sortir de ce bunker pour vous lancer dans
+              | la culture raisonnée de tubercule bio sans gluten et d'expérimenter votre danse de la pluie et votre
+              | dialogue végétal à sens unique.
+            li#bRevolte.choice.bRevolte
+              | Votre premier jet du manifeste du nouveau monde. Afin d'assurer votre futur proche de dictateur
+              | révolutionnaire rien de tel qu'un bon règlement. Abat les voiture, les vélos, la fourrure, les
+              | leggings, Maitre Gims, la zumba, les odeurs corporels... Bref Abat la race humaine telle est notre
+              | seule issue !
+            li#bBouffe.choice.bBouffe
+              | La bible des 100 meilleurs recettes post apocalyptique comprenant: la cuisse de pote rôtie au miel,
+              | le cromesquis de sciure de bois aux graviers, la soupe de résidus radioactifs et surtout le best
+              | seller "initiation au cannibalisme non létal pour les nuls"
+            li#bAlcool.choice.bAlcool
+              | Un canon à plasma biphasé, un poignard double lame de la légion étrangère, quelques grenades, un kit
+              | "Je fais mon cocktail Molotov maison" et une vingtaine de futs de Calva (ça réchauffe et ça
+              | cautérise!). On nous parle de fin du monde mais qui sait ce qui nous attend dehors !
+        // ///   3   ///
+        #askThree.askThree
+          h3 3. Pour vous le mariage c'est :
+          ul
+            li#cBouffe.choice.cBouffe
+              | L'occasion d'un repas gargantuesque en 35 services dont terrines et autres pasticeries (type
+              | oreiller de la belle aurore), rôtis en tout genre (cannette, poule faisane, paon, cygne... si ça
+              | existe c'est que ca se mange !), entremet à gogo, poissons de toutes origines, fromages (qui puent
+              | de
+              | préférence) et douceur. Un menu digne de Monsieur Escoffier. Pantalon déboutonnable ou à ceinture
+              | élastique de rigueur de rigueur !
+            li#cRevolte.choice.cRevolte
+              | Un symbole consumériste imposant aux moutons que nous sommes de dépenser outre mesure en vue de
+              | rentrer de force dans les cases imposées des questionnaires administratifs. Une fete avilissante
+              | glorifiant une société qui nie toute individualité. Ce n'est pas demain la veille que vous vous
+              | plierez à ce genre d'absurdité !
+            li#cVegan.choice.cVegan
+              | L'occasion d'exhiber la dernière création 100% vegan de Dianne Klothilde (Avec deux N et un
+              | K !!!)votre amie styliste avant-gardiste qui a dessiné une collection spéciale cérémonie en fibre de
+              | soja et cuir synthétique ! Avoir la classe tout en faisant changer le monde tel est votre fer de
+              | lance!
+            li#cAlcool.choice.cAlcool
+              | Alcool, Alcool et Alcool ! Et pourquoi pas un limbo sous un bâton enflammé, rien de tel pour marquer
+              | une occasion mémorable et briser la glace avec des inconnus.
+        // ///   4   ///
+        #askFour.askFour
+          h3
+            | 4. Vous attendez désespérément Fabrice et Agathe, après quelques appels infructueux ils vous envois un
+            | message: "On arrive, désolé, bloqué dans les bouchons...". Vous pensez :
+          ul
+            li#dRevolte.choice.dRevolte
+              | Hidalgo et ses potes les néo-bobo-écolo auront notre perte! 2h30 que vos deux acolytes sont en
+              | chemin pourtant ils vous avaient bien dit n'être qu'à 1km de votre lieu de rencontre !!! Tous dans
+              | la
+              | rue, Honte aux politiques en place qui ne nous veulent que du mal !
+            li#dVegan.choice.dVegan
+              | Si seulement ces deux abrutis c'étaient mis au vélo ou encore mieux au jogging, ils seraient arrivés
+              | depuis belle lurette ! Dès qu'ils seront là vous ne manquerez pas de les persuader des bienfaits de
+              | ce type d'exercice et peut être même de les initier au yoga biologico-physiologique dernière
+              | tendance dans la capitale.
+            li#dAlcool.choice.dAlcool
+              | Heu... bouchons de calva ou de château Margaux ? Vous n'êtes pas dupe les retards de plus de deux
+              | heures ne peuvent être causés que par du liège! Heureusement vous êtes vous même en compagnie de ce
+              | type de chose, ça aide à passer le temps !
+            li#dBouffe.choice.dBouffe
+              | Parfait! Vous recommandez en urgence une planche charcuterie/fromage avant que ces deux goinfre
+              | n'arrivent pour vous ôter la nourriture de la bouche. Partagez c'est bien mais manger c'est mieux !
+              | Les plaisirs solitaires y a que ca de vrai.
+        // ///   5   ///
+        #askFive.askFive
+          h3 5. Les enfants ça vous inspire :
+          ul
+            li#eVegan.choice.eVegan
+              | Ne sommes nous pas déjà bien assez nombreux sur cette fichue planète à bout de souffle !!! Quel
+              | égoïsme que de céder à la tentation de créer un sur-consommateur supplémentaire ! Vous ne vous
+              | attendrirez à son égard que si on le prénomme jonquille ou topinambour et qu'on le nourri
+              | exclusivement le lait de soja et d'amande !
+            li#eAlcool.choice.eAlcool
+              | La vente à la découpe, y a que ca de vrai! D'un petit corps qui n'a presque pas servi on devrait
+              | pouvoir tirer un bon prix sur le darknet ! C'est le début de la richesse ! Mais vous n'êtes pas
+              | chien, un œil acheté, un œil offert et pour tout rein vendu on offre la bouteille de Calva !
+            li#eBouffe.choice.eBouffe
+              | Vous adorez l'agneau de lait et comme il ne faut pas mourir idiot une magnifique recette vient de
+              | poindre dans votre esprit, cuissot de nourrisson confit aux herbes et côtelettes de nouveau né
+              | grillées à la plancha! Michelin n'a qu'a bien se tenir la révolution de la gastronomie contemporaine
+              | pointe le bout de son nez !
+            li#eRevolte.choice.eRevolte
+              | La révolution est en marche! Un petit être malléable que l'on pourra entrainer afin qu'il ne tombe
+              | pas dans les travers de cette société perfide. Pas de prénom! On le laissera en choisir un quand il
+              | atteindra l'âge nécessaire. Il en va de même pour son genre: garçon, fille, androgyne ou elfe
+              | démoniaque il sera bien assez tôt pour qu'il choisisse son camp.
+        // ///   6   ///
+        #askSix.askSix
+          h3 6. Votre dessin animé préféré :
+          ul
+            li#fBouffe.choice.fBouffe
+              | Ratatouille sans hésitation !!! Les plaisirs de la bouche avant tout et l'initiation gustative dès
+              | le plus jeune âge sont votre mantra. On est jamais trop jeune pour apprendre à maitriser la cuisson
+              | du gigot de sept heures et des ris de veaux meunières. D'ailleurs vous même avez concoctez vos
+              | premiers œufs meurettes à 4ans et demi sur votre mini-cuisinière/dinette, rien de bien sorcier !
+            li#fVegan.choice.fVegan
+              | Vous vous rêvez Pocahontas, personnage avant-gardiste et surtout écolo avant l'heure chantant "l'air
+              | du vent" à tue-tête et parlant aux esprits de la foret! Toutefois la petite Lisa Simpson,
+              | végétarienne et fervente défenseuse de la nature et des animaux rentre aussi dans votre top 3
+            li#fAlcool.choice.fAlcool
+              | Asterix et Obélix! Boire et se battre voilà une routine qui parle à votre cœur. Y a pas à dire les
+              | gaulois savaient vivre. En plus vous adorez les moustaches !
+            li#fRevolte.choice.fRevolte
+              | Vous détestez les dessin animé et contes pour enfant! Entre la belle aux bois dormant qui prône le
+              | quasi viol d'une pauvre jouvencelle endormie, la belle et la bête encourageant à la zoophilie,
+              | Cendrillon ou l'asservissement forcé d'une jeune fille vouée à rester une bonniche ad vitam aeternam
+              | sans son sauveteur providentiel, blanche neige en femme de ménage sous le joug d'une bande de nain
+              | lubrique... Pas de ça chez vous
+        // ///   7   ///
+        #askSeven.askSeven
+          h3
+            | 7. Fabrice et Agathe sont en panne d'inspiration, ils compte sur vous pour organiser les vacances de cet
+            | été! Vous débordez d'idée très précise car pour vous la garantie de vacances réussies c'est :
+          ul
+            li#gVegan.choice.gVegan
+              | Pour de vrai vacances un retour aux sources est nécessaire. Direction le Larzac dans la première
+              | laiterie-fromagerie vegan, fabricaton et dégustation sont au programme pour votre plus grand
+              | plaisir. En soirée débat introspectif avec un troupeau de chèvre enfin libre de gérer son lait et sa
+              | laine comme bon lui semble.
+            li#gRevolte.choice.gRevolte
+              | Des vacances engagées y a que ca de vrai. Le mausolée du Che Guevara à Cuba avec un bon cigare, puis
+              | direction pékin pour un sitting place Tian'anmen. Ensuite une manifestation avec les femens histoire
+              | de s'activer un peu ! Et une reconstitution de la révolution française avec atelier guillotine, puis
+              | escape game de la prise de la bastille. On finit avec une soirée discothèque dress code mai 68 et
+              | activité lancé de pavés !
+            li#gBouffe.choice.gBouffe
+              | Guide Michelin en main un road trip gastronomique vous attend ! Un brunch 3 étoiles pour commencer
+              | du bon pied, puis vadrouille vers des déjeuners et diners chez Joël Robuchon (et sa purée de ratte),
+              | Tierry Marx (et son risotto de soja aux huitres), Pierre Gagnaire (pour sa cuisine de sentiment),
+              | Alain Ducasse (malgré sa tête de con), Marc Veyrat (et son yaourt au foie gras) Alain Passard (et sa
+              | liche grillée), Yannick Alléno (et ses œufs parfaits), George Blanc (et son homard bleu au vn
+              | jaune). Puis pour conclure en beauté direction quelque part à Shangaï pour un diner à l'Ultraviolet
+              | de Paul Pairet au menu 20 plats avec lumières, sons, musiques, projections images et sensations.
+            li#gAlcool.choice.gAlcool
+              | Ici aventure et frisson sont au rendez-vous sur fond de route des vins, thématiques oblige et la
+              | météo estivale donnant souvent soif. Paint ball et lasergame tous les matins. Concours de levé de
+              | coude à l'apéro puis barbecue de mise tous les midis avec trous normands imposés. Pour bien digérer
+              | un petit parcours du combattant dont seul les vrais de vrais ont le secret sera organiser après le
+              | pousse café.
+        // ///   8   ///
+        #askEight.askEight
+          h3 8. Un mot pour vous définir :
+          ul
+            li#hRevolte.choice.hRevolte
+              | Séditieux
+            li#hBouffe.choice.hBouffe
+              | Hédoniste
+            li#hAlcool.choice.hAlcool
+              | Baroudeur
+            li#hVegan.choice.hVegan
+              | Naturophile
+        // ///   9   ///
+        #askNine.askNine
+          h3 9. ρ(∂v∂t+v.∇v)=−∇p+∇.T+f :
+          ul
+            li#iAlcool.choice.iAlcool
+              | L’ascension de l’humanité (l’équation de Navier-Stokes), après quelque verres vous avez toujours été
+              | un pro en mécanique des fluides et tout particulièrement cette formule décrivant le mouvement des
+              | fluides newtoniens !!! Y a pas à dire les fluides (quel qu'ils soient) ça vous connait.
+            li#iRevolte.choice.iRevolte
+              | C'est évident cette formule cache tout bonnement le plus grand complot mondial visant à nous
+              | lobotomiser en insérant des messages subliminaux dans l'ensemble de nos programmes télévisuel et
+              | radiophonique. Encore un coup des illuminatis! Tout ca pour nous empêcher de prendre les armes
+              | contre tous ces dirigeants qui abusent de nous.
+            li#iVegan.choice.iVegan
+              | Ras le bol de ce recours intempestif aux maths et à la physique ! Nous ne sommes pas que des
+              | numéros. Toutes ses formules ne valent rien à coté des vrais problèmes de fond comme la pudeur
+              | exacerbé du mouton qui vient d'être tondu à l'insu de son plein gré, le sentiment d'usurpation de
+              | cette vache laitière qui se voit voler sa production sans son consentement. Et quid de cette carotte
+              | arrachée à son lit de terre bien douillet sans aucune demande préalable !
+            li#iBouffe.choice.iBouffe
+              | Enfin une formule permettant de découper les notes de restos à 25personnes en prenant en compte
+              | l'ensemble des variables ("je n'ai pas pris d'alcool", "moi, je n'ai bu qu'un demi verre", "je n'ai
+              | mangé qu'une tranche de saucisson", "je ne payerai pas l'autre con qui a pris 2 entrées 4 plats,
+              | 3desserts et un digeo", "désolée mais ma salade coutait beaucoup moins cher que le filet de bœuf
+              | wellington de ta pote!", "je n'avais demandé qu'une carafe d'eau et une tomate mozza, tu m'avais
+              | bien dit que ca ne te gênait que je goute la moitié de ton triple cheese-burger supplément
+              | saindoux"...)
+        // ///   10   ///
+        #askTen.askTen
+          h3
+            | 10. Pour conclure, pourquoi comptez vous venir faire la fete avec Fabrice et Agathe le 06 Juillet 2019 ?
+          ul
+            li#jBouffe.choice.jBouffe
+              | Vous les adorez et les trouvez délicieux
+            li#jVegan.choice.jVegan
+              | Vous les adorez et les trouvez trop beaux
+            li#jRevolte.choice.jRevolte
+              | Vous les adorez et seriez prêt à tuer pour eux
+            li#jAlcool.choice.jAlcool
+              | Vous les adorez et les suivriez jusqu'au bout du monde
+        // //////////  CONCLUSIONS  //////////
+        #askFin.askFin
+          h3 CONCLUSION :
+          ul
+            li#finBouffe.choice.finBouffe
+              img(src="static/img/bouffe.gif", alt="rebel")
+              p
+                | Vous êtes un vrai gourmet pour ne pas dire un goinfre. C'est avec grand plaisir que Fabrice et
+                | Agathe feteront avec vous leur mariage sous réserve que vous laissiez un peu à manger aux autres
+                | convives. Pour rappel on ne lèche pas la cuve à bitume une fois le gigot sorti et on ne mange ni la
+                | décoration fleural ni les tenues des mariés un peu de respect tout de même !!! Apprenez à contrôler
+                | vos appétits car bien que tout puisse sembler appétissant, tout ne ce mange pas !
+            li#finRevolte.choice.finRevolte
+              img(src="static/img/rebel.gif", alt="rebel")
+              p
+                | Vous êtes un éternel révolté et c'est avec plaisir que Fabrice et Agathe disserteront avec vous de
+                | tous ces complots à démasquer et toutes ces révolutions à engagées. Sous réserves toutefois, que
+                | vous mettiez un peu de coté votre facette activiste anarchiste afin que vous ne coupiez pas la tête
+                | des mariés avant le dessert et n'organisiez pas non plus de putsch dans le courant de la soirée.
+                | Vouloir faire changer le monde c'est bien mais gardez une place de choix à vos amis dans le nouvel
+                | ordre mondial que vous tentez d'instaurer
+            li#finVegan.choice.finVegan
+              img(src="static/img/vegan.gif", alt="rebel")
+              p
+                | Oh malheureux bobo vegan, si une invitation vous est parvenu c'est que vous avez une place dans les
+                | cœurs de Fabrice et Agathe, toutefois vous risquez d'être bien malheureux si vos convictions ne
+                | changent pas d'ici là. Cauchemars en perspectives face à cette orgie de viande le tout dans un corps
+                | de ferme non certifié bio et pouvant présenté des traces de gluten. Il vous reste un peu de temps
+                | pour retrouver vos esprits afin de parvenir à passer un bon moment avec les mariés
+            li#finAlcool.choice.finAlcool
+              img(src="static/img/alcool.gif", alt="rebel")
+              p
+                | Aventurier alcoolique vous avez probablement côtoyé les deux tourtereaux lors d'une de leurs
+                | nombreuses soirées de débauches. Il va de soit qu'ils seront des plus heureux que vous soyez à leur
+                | coté. Alors s'il vous plait veillez au grain car les mariés n'ont pas commandé de coma éthylique
+                | entre les fromage et la pièce montée de plus aucun des deux n'a son brevet de secourisme ! Festif un
+                | jour, festif toujours on compte bel et bien sur votre présence.
+            li#finBouffeRevolte.choice.finBouffeRevolte
+              img(src="static/img/wtf.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte]
+            li#finBouffeVegan.choice.finBouffeVegan
+              img(src="static/img/indécis.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Vegan]
+            li#finBouffeAlcool.choice.finBouffeAlcool
+              img(src="static/img/indécis2.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Alcool]
 
-          li#finVeganRevolte.choice.finVeganRevolte
-            img(src="static/img/indécis2.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Revolte]
-          li#finVeganAlcool.choice.finVeganAlcool
-            img(src="static/img/indécis2.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Alcool]
+            li#finVeganRevolte.choice.finVeganRevolte
+              img(src="static/img/indécis2.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Revolte]
+            li#finVeganAlcool.choice.finVeganAlcool
+              img(src="static/img/indécis2.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Alcool]
 
-          li#finRevolteAlcool.choice.RevolteAlcool
-            img(src="static/img/indécis2.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Revolte - Alcool]
+            li#finRevolteAlcool.choice.RevolteAlcool
+              img(src="static/img/indécis2.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Revolte - Alcool]
 
-          li#finBouffeVeganAlcool.choice.finBouffeVeganAcool
-            img(src="static/img/wtf.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Vegan - Alcool]
-          li#finBouffeRevolteAlcool.choice.finBouffeRevolteAlcool
-            img(src="static/img/wtf.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte - Alcool]
-          li#finBouffeRevolteVegan.choice.finBouffeRevolteVegan
-            img(src="static/img/wtf.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte - Vegan]
+            li#finBouffeVeganAlcool.choice.finBouffeVeganAcool
+              img(src="static/img/wtf.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Vegan - Alcool]
+            li#finBouffeRevolteAlcool.choice.finBouffeRevolteAlcool
+              img(src="static/img/wtf.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte - Alcool]
+            li#finBouffeRevolteVegan.choice.finBouffeRevolteVegan
+              img(src="static/img/wtf.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Bouffe - Revolte - Vegan]
 
-          li#finVeganAlcoolRevolte.choice.finVeganAlcoolRevolte
-            img(src="static/img/wtf.gif", alt="wtf")
-            p
-            | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Alcool - Revolte]
-      a#reset.reset(href="javascript:window.location.reload()") Relancer
-    footer
-      p - Tous droits confondus approuvu, lu, et urluberlu par Pierre -
+            li#finVeganAlcoolRevolte.choice.finVeganAlcoolRevolte
+              img(src="static/img/wtf.gif", alt="wtf")
+              p
+              | Tu est un éternel emmerdeur [Inserer conclusion de l'égalité Vegan - Alcool - Revolte]
+        a#reset.reset(href="javascript:window.location.reload()") Réinitialiser
+      footer
+        p - Tous droits confondus approuvu, lu, et urluberlu par Pierre -

@@ -75,7 +75,7 @@ h3{
 }
 
 ul li {
-    margin: 4px 0 4px 0;
+    margin: 1% 0 1% 0;
     padding: 8px;
     cursor: pointer;
 }
@@ -88,8 +88,8 @@ img{
 }
 ul li:hover {
     border-radius: 5px;
-    background-color: #ffdc81;
-    box-shadow: inset #000000ad 0px 0px 5px;
+    /* background-color: #ffdc81; */
+    box-shadow: #4c4c4cbf 0px 4px 8px 1px;
     transition: 0.5s all;
 }
 
@@ -112,6 +112,14 @@ ul li:hover :has(li) {
 ul li:not(:hover) {
     transition: 0.5s all;
 }
+
+.choice{
+    border-radius:6px; 
+}
+.bouffe{background: linear-gradient(#ff8e7a85, #fe563985)}
+.vegan{background: linear-gradient(#8aff9d85, #44ff6385)}
+.revolte{background: linear-gradient(#c78aff85, #a23fff85)}
+.alcool{background: linear-gradient(#8de3fd85, #43cffa85)}
 
 #askFin li{
     cursor: default;

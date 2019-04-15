@@ -63,7 +63,7 @@ button:hover{
 h1,
 h2{
     color: #ffc900;
-    text-shadow: #000000 -2px 2px 4px;
+    text-shadow: #000000 -2px 1px 4px;
     font-weight: bold;
     text-align: center;
     padding: 20px;

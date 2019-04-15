@@ -211,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             finAlcoolEtat: false,
             finAlcoolScore: 0,
 
+            //  ---------  EGALITES  --------- 
             finBouffeRevolte: document.getElementById('finBouffeRevolte'),
             finBouffeVegan: document.getElementById('finBouffeVegan'),
             finBouffeAlcool: document.getElementById('finBouffeAlcool'),

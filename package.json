@@ -2,7 +2,7 @@
   "name": "faire-part",
   "version": "1.0.0",
   "description": "Un genre de test de personnalité déjanté et délirant  mais fait avec serieux tout de même",
-  "main": "start",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
     "test": "test"

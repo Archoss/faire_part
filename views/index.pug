@@ -13,8 +13,9 @@ html(lang='fr')
   body
     container
       #page
+        a.definition(href="/gigotBitume") *
         .header  
-          h1 Avez vous vraiment mérité votre gigot bitume ?
+          h1 Avez vous vraiment mérité votre gigot bitume* ?
           h2 Ou quel type d'invité êtes-vous vraiment ?
           .intro
             p
@@ -24,11 +25,12 @@ html(lang='fr')
               | Mais l’avez-vous mérité ?
             p
               | Pour le savoir, répondez à ces quelques questions en cliquant sur la réponse qui vous correspond le mieux
-        button#start  C'est parti !
+        button#start  C'est parti
         // //////////  QUESTIONNAIRE  //////////
         // ///   1   ///
         #askOne.askOne
           h3 1. L'intérêt du gigot bitume selon vous :
+          img.imgQuestion(src="static/img/question.gif", alt="pourquoi le gigot bitume ?")
           ul
             li#aRevolte.choice.revolte
               | Voir des hommes du BTP s'activer docilement aux fourneaux !!! Font-ils aussi la vaisselle ? 
@@ -47,6 +49,7 @@ html(lang='fr')
           h3
             | 2. La fin du monde est imminente ! Vous êtes coincé à l'abri d'un bunker avec Fabrice et Agathe. Vous avez 
             | pensé à prendre l'indispensable :
+          img.imgQuestion(src="static/img/question22.gif", alt="fin du monde")
           ul
             li#bVegan.choice.vegan
               | Le DVD de l'intégral des shows nocturnes de danse contemporaine-abstraite de Arte et deux kilos de baies de Goji. 
@@ -68,6 +71,7 @@ html(lang='fr')
         // ///   3   ///
         #askThree.askThree
           h3 3. Pour vous le mariage c'est :
+          img.imgQuestion(src="static/img/gif/mariage2.gif", alt="mariage")
           ul
             li#cBouffe.choice.bouffe
               | L'occasion d'un repas gargantuesque en 35 services dont terrines et autres pâtisseries 
@@ -92,6 +96,7 @@ html(lang='fr')
           h3
             | 4. Vous attendez désespérément Fabrice et Agathe, après quelques appels infructueux ils vous envoient un 
             | message: "On arrive, désolé, bloqué dans les bouchons...". Vous pensez :
+          img.imgQuestion(src="static/img/question4.gif", alt="retard lapin")
           ul
             li#dRevolte.choice.revolte
               | Hidalgo et ses potes, les néo-bobo-écolo auront notre perte! 2h30 que vos deux acolytes sont en chemin, 
@@ -113,6 +118,7 @@ html(lang='fr')
         // ///   5   ///
         #askFive.askFive
           h3 5. Les enfants ça vous inspire :
+          img.imgQuestion(src="static/img/gif/mome5.gif", alt="mome")
           ul
             li#eVegan.choice.vegan
               | Ne sommes nous pas déjà bien assez nombreux sur cette fichue planète à bout de souffle !!! Quel
@@ -136,6 +142,7 @@ html(lang='fr')
         // ///   6   ///
         #askSix.askSix
           h3 6. Votre dessin animé préféré :
+          img.imgQuestion(src="static/img/question6.gif", alt="mome")
           ul
             li#fBouffe.choice.bouffe
               | Ratatouille sans hésitation !!! Les plaisirs de la bouche avant tout et l'initiation gustative dès 
@@ -159,6 +166,7 @@ html(lang='fr')
           h3
             | 7. Fabrice et Agathe sont en panne d'inspiration, ils compte sur vous pour organiser les vacances de cet été! 
             | Vous débordez d’idées très précises car, pour vous, la garantie de vacances réussies, c'est :
+          img.imgQuestion(src="static/img/question7.gif", alt="mome")
           ul
             li#gVegan.choice.vegan
               | Pour de vraies vacances, un retour aux sources est nécessaire. Direction le Larzac dans la première 
@@ -188,6 +196,7 @@ html(lang='fr')
         // ///   8   ///
         #askEight.askEight
           h3 8. Un mot pour vous définir :
+          img.imgQuestion(src="static/img/question81.gif", alt="jim carrey")
           ul
             li#hRevolte.choice.revolte
               | Séditieux
@@ -200,6 +209,7 @@ html(lang='fr')
         // ///   9   ///
         #askNine.askNine
           h3 9. ρ(∂v∂t+v.∇v)=−∇p+∇.T+f :
+          img.imgQuestion(src="static/img/gif/formule mathématique.gif", alt="math")
           ul
             li#iAlcool.choice.alcool
               | L’ascension de l’humanité (l’équation de Navier-Stokes), après quelque verres vous avez toujours été
@@ -227,6 +237,7 @@ html(lang='fr')
         #askTen.askTen
           h3
             | 10. Pour conclure, pourquoi comptez vous venir faire la fête avec Fabrice et Agathe le 06 Juillet 2019 ?
+          img.imgQuestion(src="static/img/question10.gif", alt="minions")
           ul
             li#jBouffe.choice.bouffe
               | Vous les adorez et les trouvez délicieux
@@ -272,7 +283,7 @@ html(lang='fr')
                 | certifié bio et pouvant présenter des traces de gluten. Il vous reste un peu de temps pour retrouver vos 
                 | esprits afin de parvenir à passer un bon moment avec les mariés.
             li#finAlcool.choice.alcool
-              img(src="static/img/alcool.gif", alt="rebel")
+              img(src="static/img/gif/Alcool.gif", alt="rebel")
               p
                 | Aventurier alcoolique vous avez probablement côtoyé les deux tourtereaux lors d'une de leurs nombreuses 
                 | soirées de débauches. 
@@ -371,7 +382,7 @@ html(lang='fr')
                     | la décoration fleurale ni les tenues des mariés, un peu de respect tout de même !!! Apprenez à 
                     | contrôler vos appétits car, bien que tout puisse sembler appétissant, tout ne se mange pas !
                 li.choice.alcool
-                  img(src="static/img/gif/Alcool.gif", alt="rebel")
+                  img(src="static/img/alcool.gif", alt="rebel")
                   p
                     | Aventurier alcoolique vous avez probablement côtoyé les deux tourtereaux lors d'une de leurs nombreuses 
                     | soirées de débauches. 

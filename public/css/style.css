@@ -175,7 +175,7 @@ ul li:not(:hover) {
     border-radius: 5px;
     /* background-color: #ffdc81; */
     box-shadow: #2727279c 0px 0px 0px 0px;
-    transition: 0.25s all;
+    transition: 0.5s all;
 }
 
 ul li:visited,

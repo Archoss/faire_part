@@ -18,10 +18,10 @@ body {
 }
 
 #page {
-    padding: 2%;
+    padding: 4% 1% 1% 1%;
     margin: 2% auto 5px;
     width: 970px;
-    border-radius: 6px;
+    border-radius: 8px;
     background-color: #ffeed5;
 }
 
@@ -47,11 +47,11 @@ body {
 .definition{
     line-height: normal;
     font-family: 'Roboto Slab', serif;
-    font-size: 5.5rem;
+    font-size: 6.5rem;
     font-weight: bolder;
     position: absolute;
-    left: 72%;
-    top: 30px;
+    left: 49%;
+    top: 22px;
     text-shadow: #e8a723 0.006em 0.006em 0.007em, #dd9f20 1px 1px 1px, #dd9f20 1px 2px 1px, #c18b1c 1px 3px 1px, #aa7a17 1px 4px 1px, #7e5c16 1px 5px 1px, rgba(0, 0, 0, 0.4) 1px 7px 3px, rgba(16, 16, 16, 0.2) 1px 7px 5px;
     color: #ffb724;
     border-radius: 60px;
@@ -263,20 +263,20 @@ footer p {
 @media screen and (min-width: 415px) and (max-width: 1000px){
     #page {
         width: auto;
-        padding: 8% 2% 3% 2%;
+        padding: 9% 2% 3% 2%;
         margin: 3%;
     }
     .definition{
         display: block;
-        left: 40%;
-        top: -190px;
+        left: 45%;
+        top: 5px;
         position: absolute;
     }
     ul li {
         margin: 3% 0 3% 0;
     }
     footer p{
-        margin-top: 14%;
+        margin-top: 0%;
     }
     button{
         margin-left: 40%;

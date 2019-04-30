@@ -18,9 +18,9 @@ body {
 }
 
 #page {
-    padding: 4% 1% 1% 1%;
+    padding: 2% 2% 1% 2%;
     margin: 2% auto 5px;
-    width: 970px;
+    width: 1030px;
     border-radius: 8px;
     background-color: #ffeed5;
 }
@@ -45,35 +45,25 @@ body {
     display: block;
 }
 .definition{
-    line-height: normal;
     font-family: 'Roboto Slab', serif;
-    font-size: 6.5rem;
+    font-size: 2.5rem;
     font-weight: bolder;
-    position: absolute;
-    left: 49%;
-    top: 22px;
-    text-shadow: #e8a723 0.006em 0.006em 0.007em, #dd9f20 1px 1px 1px, #dd9f20 1px 2px 1px, #c18b1c 1px 3px 1px, #aa7a17 1px 4px 1px, #7e5c16 1px 5px 1px, rgba(0, 0, 0, 0.4) 1px 7px 3px, rgba(16, 16, 16, 0.2) 1px 7px 5px;
     color: #ffb724;
-    border-radius: 60px;
 }
 
 .definition:hover{
-    color: #ff5858;
-    text-shadow: #000000 1px 1px 3px;
+    color: #ff5656;
+    text-shadow: #000000 2px 1px 3px;
     transition: all 0.25s;
     text-decoration: none;
-}
-
-span{
-    color: #e8a723;
 }
 
 .marginTop{
     margin-top: 5%;
 }
 
-.moulinDyves{
-    margin-top: 2%;
+.moulinDyves img{
+    margin-top: 3%;
     text-align: center;
     color: #585858;
 }
@@ -86,7 +76,7 @@ span{
 .moulinDyves img{
     filter: drop-shadow(0 0 8px #000000);
     border-radius: 40px;
-    margin-left: 36%;
+    margin-left: 37%;
     width: auto;
 }
 
@@ -263,14 +253,8 @@ footer p {
 @media screen and (min-width: 415px) and (max-width: 1000px){
     #page {
         width: auto;
-        padding: 9% 2% 3% 2%;
+        padding: 3% 2% 3% 2%;
         margin: 3%;
-    }
-    .definition{
-        display: block;
-        left: 45%;
-        top: 5px;
-        position: absolute;
     }
     ul li {
         margin: 3% 0 3% 0;
@@ -285,14 +269,9 @@ footer p {
 @media screen and (max-width: 414px){
     #page {
         width: auto;
-        padding: 19% 2% 3% 2%;
+        padding: 9% 3% 4% 3%;
         margin: 0px;
-    }
-    .definition{
-        display: block;
-        left: 45%;
-        top: -20px;
-        position: absolute;
+        border-radius: 0px;
     }
     ul li {
         margin: 3% 0 3% 0;

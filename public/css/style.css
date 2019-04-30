@@ -59,7 +59,7 @@ body {
 }
 
 .marginTop{
-    margin-top: 5%;
+    margin-top: 4%;
 }
 
 .moulinDyves img{
@@ -109,9 +109,9 @@ button {
     cursor: pointer;
     margin: 2% 0 1% 44%;
     background-color: #ffb724;
-    padding: 6px 15px;
+    padding: 8px 19px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     text-transform: uppercase;
     font-weight: bold;
     box-shadow: rgba(122, 82, 0, 0.69) 2px 2px 10px 0px;
@@ -214,7 +214,7 @@ ul li:hover :has(li) {
 
 .reset{
     display: none;
-    margin: 5% auto 0px;
+    margin: 0px auto 0px;
     width: min-content;
     color: rgba(255, 255, 255, 0.91);
     cursor: pointer;

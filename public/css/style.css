@@ -47,14 +47,14 @@ body {
 .definition{
     line-height: normal;
     font-family: 'Roboto Slab', serif;
-    font-size: 13.7rem;
+    font-size: 5.5rem;
     font-weight: bolder;
     position: absolute;
-    left: 90%;
-    top: -21px;
-    text-shadow: #ff0000 0.006em 0.006em 0.007em, #d90000 1px 1px 1px, #c50000 1px 2px 1px, #c50000 1px 3px 1px, #7e0000 1px 4px 1px, #830000 1px 5px 1px, rgba(0, 0, 0, 0.4) 1px 7px 3px, rgba(16, 16, 16, 0.2) 1px 7px 5px;
-    color: #ff5656;
-    border-radius: 12px;
+    left: 72%;
+    top: 30px;
+    text-shadow: #e8a723 0.006em 0.006em 0.007em, #dd9f20 1px 1px 1px, #dd9f20 1px 2px 1px, #c18b1c 1px 3px 1px, #aa7a17 1px 4px 1px, #7e5c16 1px 5px 1px, rgba(0, 0, 0, 0.4) 1px 7px 3px, rgba(16, 16, 16, 0.2) 1px 7px 5px;
+    color: #ffb724;
+    border-radius: 60px;
 }
 
 .definition:hover{
@@ -62,6 +62,10 @@ body {
     text-shadow: #000000 1px 1px 3px;
     transition: all 0.25s;
     text-decoration: none;
+}
+
+span{
+    color: #e8a723;
 }
 
 .marginTop{
@@ -256,19 +260,20 @@ footer p {
 }
 
 
-@media screen and (max-width: 1000px){
+@media screen and (min-width: 415px) and (max-width: 1000px){
     #page {
         width: auto;
-        padding: 3%;
-        margin: 4%;
-        position: relative;
-        top: 100px;
+        padding: 8% 2% 3% 2%;
+        margin: 3%;
     }
     .definition{
         display: block;
         left: 40%;
         top: -190px;
         position: absolute;
+    }
+    ul li {
+        margin: 3% 0 3% 0;
     }
     footer p{
         margin-top: 14%;
@@ -277,24 +282,25 @@ footer p {
         margin-left: 40%;
     }
 }
-@media screen and (max-width: 415){
+@media screen and (max-width: 414px){
     #page {
         width: auto;
-        padding: 7%;
-        margin: 4%;
-        position: relative;
-        top: 100px;
+        padding: 19% 2% 3% 2%;
+        margin: 0px;
     }
     .definition{
         display: block;
-        left: 40%;
-        top: -190px;
+        left: 45%;
+        top: -20px;
         position: absolute;
     }
+    ul li {
+        margin: 3% 0 3% 0;
+    }
     footer p{
-        margin-top: 27%;
+        margin-top: 4%;
     }
     button{
-        margin-left: 27%;
+        margin-left: 135px;
     }
 }

@@ -168,8 +168,14 @@ img{
 ul li:hover {
     border-radius: 5px;
     /* background-color: #ffdc81; */
-    box-shadow: #2727279c 4px 4px 10px 0px;
-    transition: 0.5s all;
+    box-shadow: #272727ca 4px 6px 10px 0px;
+    transition: 0.25s all;
+}
+ul li:not(:hover) {
+    border-radius: 5px;
+    /* background-color: #ffdc81; */
+    box-shadow: #2727279c 0px 0px 0px 0px;
+    transition: 0.25s all;
 }
 
 ul li:visited,

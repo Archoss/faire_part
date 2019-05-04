@@ -3,7 +3,8 @@
 }
 
 body {
-    min-height: 944px;
+    min-height: 959px;
+    height: 975px;
     margin:auto; 
     font-family: 'Roboto Slab', serif;
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
@@ -17,6 +18,35 @@ body {
 
 }
 
+.navbar{
+    background-color: #fff1e64f;
+    box-shadow: #0000008f 0px 0px 10px 0px;
+}
+nav input{
+    padding: 10px;
+    height: 30px;
+    border-radius: 2px;
+    border: solid 1px rgb(211, 211, 211);
+}
+nav input:first-of-type{
+    width: 180px;
+}
+nav input:last-of-type {
+    width: 120px;
+}
+nav .lienSub, nav button, .btn{
+    color: rgb(36, 36, 36);
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 2px;
+    border: none;
+    margin: 0px 6px 0px 6px;
+    box-shadow: rgba(0, 0, 0, 0.44) 1px 1px 4px 0px;
+}
+nav form {
+    margin-left: auto;
+}
+
 #page {
     padding: 2% 2% 1% 2%;
     margin: 2% auto 5px;
@@ -25,6 +55,20 @@ body {
     background-color: #ffeed5;
 }
 
+.userDisplayed{
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: #ffb64f;
+    text-shadow: #000000d1 3px 1px 3px;
+    padding: 0px 14px;
+    font-weight: bold;
+}
+.subscribe {
+    padding: 2%;
+}
+.subscribe button{
+    margin: auto;
+}
 .intro {
     padding: 4% 4% 1% 4%;
     margin-bottom: 1%;
@@ -63,7 +107,7 @@ body {
 }
 
 .moulinDyves img{
-    margin-top: 3%;
+    margin: 5%;
     text-align: center;
     color: #585858;
 }
@@ -105,7 +149,7 @@ body {
     color: #000000;
 }
 
-button {
+.start {
     cursor: pointer;
     margin: 2% 0 1% 44%;
     background-color: #ffb724;
@@ -117,8 +161,10 @@ button {
     box-shadow: rgba(122, 82, 0, 0.69) 2px 2px 10px 0px;
 }
 
-button:hover{
+button:hover, nav .lienSub:hover{
+    text-decoration: none;
     background-color: #ffaa00;
+    color: white;
     box-shadow: none;
     transition: all 0.5s;
 }
@@ -130,7 +176,8 @@ button:hover{
     box-shadow: #ffffffb8 0px 0px 30px 5px;
 
 }
-h1{
+
+h1:not(.hUnSub){
     margin-top: 5%;
 }
 h1,
@@ -288,4 +335,89 @@ footer p {
     button{
         margin-left: 135px;
     }
+    .moulinDyves img{
+        margin-left: 20%;
+    }
+    .return{
+        margin-left: 40%;
+    }
+
 }
+
+
+
+
+
+/* ------------- */
+/* LOADER.io CSS */
+/* ------------- */
+.lds-ellipsis {
+	margin: auto;
+	display: inline-block;
+	position: relative;
+	width: 64px;
+	height: 40px;
+}
+
+.lds-ellipsis div {
+	position: absolute;
+	top: 50%;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: rgb(50, 112, 192);
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+	left: 6px;
+	animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+	left: 6px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+	left: 26px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+	left: 45px;
+	animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(19px, 0);
+	}
+}
+
+/* ------------- */
+/* ------------- */

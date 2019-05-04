@@ -1,0 +1,10 @@
+nav.navbar.navbar-expand-lg.navbar-light
+	a.navbar-brand(href='/') Faire Part
+	form.form-inline.my-2.my-lg-0(action="/signIn" method="POST")
+		input.mr-sm-2(type='text', name="pseudo", placeholder="Pseudo", aria-label='name')
+		input.mr-sm-2(type='text', name="password", placeholder="******", aria-label='motDePasse')
+		button.btn-outline-success.my-2.my-sm-0(type='submit') Connexion
+	a.lienSub(href="/sub") Inscription
+	if user	
+		a.lienSub(href="/logout") Déconnexion
+		span.userDisplayed= user.name

@@ -9,9 +9,11 @@ html(lang='fr')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
     link(rel="stylesheet", href="static/css/style.css")
+    script(src='https://code.jquery.com/jquery-3.4.1.min.js', integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=', crossorigin='anonymous')
     title Faire-Part
   body
     container
+      include includes/navBar.pug
       #page
         .header  
           h1 Avez vous vraiment mérité votre 
@@ -27,7 +29,7 @@ html(lang='fr')
               | Mais l’avez-vous mérité ?
             p
               | Pour le savoir, répondez à ces quelques questions en cliquant sur la réponse qui vous correspond le mieux
-        button#start  C'est parti
+        button#start.start  C'est parti
         // //////////  QUESTIONNAIRE  //////////
         // ///   1   ///
         #askOne.askOne
@@ -676,3 +678,9 @@ html(lang='fr')
         a#reset.reset(href="javascript:window.location.reload()") Réinitialiser
       footer
         p - Tous droits confondus approuvu, lu, et urluberlu par Pierre -
+
+script.
+    $('document').ready(function() {
+        console.log( `Index chargé` );
+                
+    })                        

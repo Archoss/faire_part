@@ -675,12 +675,47 @@ html(lang='fr')
                     | faire changer le monde c'est bien mais garder une place de choix à vos amis dans le nouvel ordre mondial 
                     | que vous tentez d'instaurer.      
 
-        a#reset.reset(href="javascript:window.location.reload()") Réinitialiser
+        a#reset.reset(href="javascript:window.location.reload()") Recommencer
+
+        .commentary
+          p Section commentaires working progress ;)
+          h3 Coin des commentaires
+          .commentArea
+            //- each m in msg
+              p= m.msg
+          form(action="/message" method='POST' )
+            .form-row.align-items-center
+              textarea.form-control#textinput(name="msg", msg=msg, placeholder="Exprimez-vous sur votre mur", rows="2")
+              button.load.btn(type='submit')
+                span Envoyer
+
       footer
         p - Tous droits confondus approuvu, lu, et urluberlu par Pierre -
 
 script.
-    $('document').ready(function() {
-        console.log( `Index chargé` );
-                
+  $('document').ready(function() {
+    $(".commentary .btn").click(function(e) {
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+      $.ajax({
+            url: "/app",
+            method: 'get',
+            dataType: 'json',
+            data: {
+                messageTextarea: $("#textinput").val()
+            }
+      }).done(function(data) {
+          if(data === "Data found") {
+            console.log(data);
+            let saisieTextarea = $('#textinput').val();
+            e.preventDefault()
+            //- console.log(user)
+            const message = `<p>${msg}</p>`
+            $('.commentAre').prepend(message)
+            $("#textinput").val("");
+            //- $(".btn").attr('disabled', true)
+          }else{
+            console.log("Pas de data");
+          }
+      })                        
     })                        
+  })                        

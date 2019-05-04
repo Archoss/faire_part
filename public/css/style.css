@@ -55,6 +55,7 @@ nav form {
     background-color: #ffeed5;
 }
 
+/* -- Nom affiché quand vous êtes connecté -- */
 .userDisplayed{
     text-transform: capitalize;
     font-size: 1.6rem;
@@ -63,6 +64,7 @@ nav form {
     padding: 0px 14px;
     font-weight: bold;
 }
+
 .subscribe {
     padding: 2%;
 }
@@ -291,6 +293,33 @@ ul li:hover :has(li) {
     box-shadow: inset black 0px 0px 5px;
     transition: all 0.25s;
 }
+
+.commentary {
+    margin: 3% auto;
+    width: 700px;
+}
+.commentArea{
+    background-color: rgba(255, 255, 255, 0.428);
+    height: 20px;
+    margin: auto;
+    padding: 14px;
+}
+.commentary textarea {
+    margin: 10px auto;
+    border-radius: 8px;
+    display: block;
+}
+.commentary button {
+    display: block;
+    margin: auto;
+    background: linear-gradient(#ffd640, #ffa500);
+    color: black;
+    font-weight: bold;
+    padding: 2px 14px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+
 footer p {
     padding: 1%;
     color: #ffffff;
@@ -302,7 +331,9 @@ footer p {
     top: 5%;
 }
 
-
+/* ---------------------------- */
+/* ------ MEDIA QUERRIES ------ */
+/* ---------------------------- */
 @media screen and (min-width: 415px) and (max-width: 1000px){
     #page {
         width: auto;
@@ -341,16 +372,10 @@ footer p {
     .return{
         margin-left: 40%;
     }
-
 }
-
-
-
-
-
-/* ------------- */
-/* LOADER.io CSS */
-/* ------------- */
+/* --------------------------- */
+/* ------ LOADER.io CSS ------ */
+/* --------------------------- */
 .lds-ellipsis {
 	margin: auto;
 	display: inline-block;
@@ -418,6 +443,5 @@ footer p {
 		transform: translate(19px, 0);
 	}
 }
-
-/* ------------- */
-/* ------------- */
+/* -------------------------- */
+/* -------------------------- */

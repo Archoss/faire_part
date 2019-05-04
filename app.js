@@ -79,8 +79,26 @@ app.get("/signIn", function (req, res) {
             name: name,
             user: user,
         });
+    });
+
+    console.log("req.session.user ==> ", req.session.user);
+});
+app.get("/messages", function (req, res) {
+    const msg = req.session.msg;
+    req.db.collection('messages').find().toArray((err, msg) => {
+        res.render('index', {
+            msg: msg
+        })
+    }, function (err, msg) {
+        console.log(msg)
+        if (msg) {
+            res.json('Data found');
+        } else {
+            res.json('Erreur')
+        }
     })
-    console.log("req.session ==> ", req.session);
+    console.log("msg : ", msg)
+    console.log("req.session.message ==> ", req.session.message);
 });
 app.get("/logout", function (req, res) {
     res.redirect("/");

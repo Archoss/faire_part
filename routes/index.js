@@ -84,5 +84,26 @@ router.get('/', function (req, res) {
     })
     console.log('--- --- Connexion --- ---')
   })
+  .post('/message', function (req, res, next) {
+    console.log("*******************************")
+    console.log("req.body.msg : ", req.body.msg)
+    let message = {
+      msg: req.body.msg.trim()
+    }
+    // /---/  MONGO  /---/ //
+    req.db.collection('messages').insertOne(
+      message,
+      err => {
+        if (err) {
+          throw err;
+        } else {
+          req.session.message = message;
+          res.render("index", {
+            message: message,
+          });
+        }
+      })
+    console.log("message stocké !")
+  })
 
 module.exports = router;

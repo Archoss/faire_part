@@ -92,8 +92,10 @@ app.get("/messages", function (req, res) {
     }, function (err, msg) {
         console.log(msg)
         if (msg) {
+            console.log('GG !!!!!!!!!!!!!!!!!')
             res.json('Data found');
         } else {
+            console.log('PROUT !!!!!!!!!!!!!!!!')
             res.json('Erreur')
         }
     })

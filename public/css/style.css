@@ -299,10 +299,26 @@ ul li:hover :has(li) {
     width: 700px;
 }
 .commentArea{
-    background-color: rgba(255, 255, 255, 0.428);
-    height: 20px;
+    background-color: rgb(255, 245, 230);
+    color: #676767;
+    box-shadow: inset #ffeed5 0px 0px 3px 6px;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    min-height: 20px;
+    font-weight: 900;
+    height: auto;
+    width: auto;
     margin: auto;
-    padding: 14px;
+    vertical-align: middle;
+    padding: 14px 21px;
+}
+.commentArea p{
+    margin: 1%;
+    padding: 5px 10px;
+    background-color: #ffe4a0d4;
+    width: fit-content;
+    border-radius: 6px;
 }
 .commentary textarea {
     margin: 10px auto;

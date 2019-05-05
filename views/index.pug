@@ -681,12 +681,12 @@ html(lang='fr')
           p Section commentaires working progress ;)
           h3 Coin des commentaires
           .commentArea
-            //- each m in msg
+            each m in msg
               p= m.msg
           form(action="/message" method='POST' )
             .form-row.align-items-center
-              textarea.form-control#textinput(name="msg", msg=msg, placeholder="Exprimez-vous sur votre mur", rows="2")
-              button.load.btn(type='submit')
+              textarea.form-control#textinput(name="msg", msg=msg, placeholder="Ajoutez un commentaire", rows="2")
+              button.load.btn(disabled, type='submit')
                 span Envoyer
 
       footer
@@ -694,28 +694,35 @@ html(lang='fr')
 
 script.
   $('document').ready(function() {
+    $("#textinput").keyup(function(){
+      if($("#textinput").val() !== "") {
+        $(".commentary .btn").attr('disabled', false)
+      } else {
+        $(".btn").attr('disabled', true)
+      }
+    })
     $(".commentary .btn").click(function(e) {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+      console.log("|---| AJAX |---| ", $("#textinput").val())
+      //- event.preventDefault();
+      var msg = $("#textinput").val();
       $.ajax({
-            url: "/app",
+            url: "/message",
             method: 'get',
             dataType: 'json',
-            data: {
-                messageTextarea: $("#textinput").val()
-            }
+            contentType: 'application/json',
+            data: {msg}
       }).done(function(data) {
+            console.log(msg)
           if(data === "Data found") {
-            console.log(data);
+            console.log("data : ", data);
             let saisieTextarea = $('#textinput').val();
-            e.preventDefault()
-            //- console.log(user)
-            const message = `<p>${msg}</p>`
-            $('.commentAre').prepend(message)
+            const message = `<p>${data}</p>`
+            $('.commentArea').prepend(message)
             $("#textinput").val("");
             //- $(".btn").attr('disabled', true)
           }else{
-            console.log("Pas de data");
+            console.log("Mauvaise data", msg)
           }
       })                        
-    })                        
+    }) 
   })                        

@@ -84,9 +84,9 @@ router.get('/', function (req, res) {
     })
     console.log('--- --- Connexion --- ---')
   })
-  .post('/message', function (req, res, next) {
-    console.log("*******************************")
-    console.log("req.body.msg : ", req.body.msg)
+  .post('/message', function (req, res) {
+    // console.log("*******************************")
+    // console.log("req.body.msg : ", req.body.msg)
     let message = {
       msg: req.body.msg.trim()
     }
@@ -98,12 +98,11 @@ router.get('/', function (req, res) {
           throw err;
         } else {
           req.session.message = message;
-          res.render("index", {
-            message: message,
-          });
         }
+        console.log("message.msg : ", message.msg)
+        console.log("req.session.message : ", req.session.message)
       })
-    console.log("message stocké !")
+    console.log(" message stocké !")
   })
 
 module.exports = router;

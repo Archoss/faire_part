@@ -10,6 +10,9 @@ const express = require("express"),
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -18,9 +21,6 @@ app.locals.pretty = true;
 
 //URL de notre base
 app.use(expressMongoDb("mongodb://pierreVanneste:bonde007FairePart@ds149676.mlab.com:49676/faire-part-db"));
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json())
 
 app.use('/static', express.static(__dirname + '/public'));
 
@@ -52,6 +52,24 @@ app.get('/', function (req, res) {
             user: user,
         });
     })
+    const msg = req.session.msg;
+    req.db.collection('messages').find().toArray((err, msg) => {
+        console.log("MSG : ", msg)
+        res.render('index', {
+            msg: msg
+        })
+        // res.json(msg)
+    }, function (err, data) {
+        console.log("Le super message en ajax : ", data)
+        if (data) {
+            console.log('GG !!!!!!!!!!!!!!!!!')
+            res.json('Data found');
+        } else {
+            console.log('PROUT !!!!!!!!!!!!!!!!')
+            res.json('Erreur')
+        }
+        console.log("mdr")
+    })
     // console.log("user :", user)
 });
 app.get("/sub", function (req, res) {
@@ -69,6 +87,24 @@ app.get("/signUp", function (req, res) {
             user: user,
         });
     })
+    const msg = req.session.msg;
+    req.db.collection('messages').find().toArray((err, msg) => {
+        console.log("MSG : ", msg)
+        res.render('index', {
+            msg: msg
+        })
+        // res.json(msg)
+    }, function (err, data) {
+        console.log("Le super message en ajax : ", data)
+        if (data) {
+            console.log('GG !!!!!!!!!!!!!!!!!')
+            res.json('Data found');
+        } else {
+            console.log('PROUT !!!!!!!!!!!!!!!!')
+            res.json('Erreur')
+        }
+        console.log("mdr")
+    })
     // console.log("req.session ==> ", req.session);
 });
 app.get("/signIn", function (req, res) {
@@ -80,27 +116,50 @@ app.get("/signIn", function (req, res) {
             user: user,
         });
     });
-
-    console.log("req.session.user ==> ", req.session.user);
-});
-app.get("/messages", function (req, res) {
     const msg = req.session.msg;
     req.db.collection('messages').find().toArray((err, msg) => {
+        console.log("MSG : ", msg)
         res.render('index', {
             msg: msg
         })
-    }, function (err, msg) {
-        console.log(msg)
-        if (msg) {
+        // res.json(msg)
+    }, function (err, data) {
+        console.log("Le super message en ajax : ", data)
+        if (data) {
             console.log('GG !!!!!!!!!!!!!!!!!')
             res.json('Data found');
         } else {
             console.log('PROUT !!!!!!!!!!!!!!!!')
             res.json('Erreur')
         }
+        console.log("mdr")
+    })
+
+    console.log("req.session.user ==> ", req.session.user);
+});
+app.get("/message", function (req, res) {
+    const msg = req.session.msg;
+    console.log("msg : ", msg)
+    // console.log(req); console.log(res);
+    req.db.collection('messages').find().toArray((err, msg) => {
+        console.log("MSG : ", msg)
+        res.render('index', {
+            msg: msg
+        })
+        // res.json(msg)
+    }, function (err, data) {
+        console.log("Le super message en ajax : ", data)
+        if (data) {
+            console.log('GG !!!!!!!!!!!!!!!!!')
+            res.json('Data found');
+        } else {
+            console.log('PROUT !!!!!!!!!!!!!!!!')
+            res.json('Erreur')
+        }
+        console.log("mdr")
     })
     console.log("msg : ", msg)
-    console.log("req.session.message ==> ", req.session.message);
+    console.log("req.session.msg ==> ", req.session.msg);
 });
 app.get("/logout", function (req, res) {
     res.redirect("/");

@@ -299,7 +299,7 @@ ul li:hover :has(li) {
     width: 700px;
 }
 .commentArea{
-    background-color: rgb(255, 245, 230);
+    background-color: rgb(255, 250, 244);
     color: #676767;
     box-shadow: inset #ffeed5 0px 0px 3px 6px;
     border-radius: 0px;

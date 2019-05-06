@@ -4,14 +4,33 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res) {
-  const user = req.session.user;
   const name = req.session.name;
-  req.db.collection('users').find().toArray((err, name) => {
+  if (req.session.user) {
+    const user = req.session.user;
+    req.db.collection('users').find().toArray((err, name) => {
+      res.render('index', {
+        name: name,
+        user: user,
+      });
+    })
+  }
+  const msg = req.session.msg;
+  req.db.collection('messages').find().toArray((err, msg) => {
+    console.log("TEST msg render")
     res.render('index', {
-      name: name,
-      user: user,
-    });
-  })
+      msg: msg
+    },
+      err => {
+        if (err) {
+          throw err;
+        } else {
+          req.session.msg = msg;
+        }
+        console.log("req.session.msg : ", req.session.msg)
+      });
+
+  });
+  console.log("req.session.user ==> ", req.session.user);
   console.log("req.session ==> ", req.session);
 })
   .post('/signUp', function (req, res) {
@@ -90,6 +109,13 @@ router.get('/', function (req, res) {
     let message = {
       msg: req.body.msg.trim()
     }
+    req.db.collection('messages').find().toArray((err, msg) => {
+      console.log("/message : ", msg || 'Aucun message')
+      res.render('index', {
+        msg: msg
+      })
+      // res.json(msg)
+    })
     // /---/  MONGO  /---/ //
     req.db.collection('messages').insertOne(
       message,
@@ -97,10 +123,9 @@ router.get('/', function (req, res) {
         if (err) {
           throw err;
         } else {
-          req.session.message = message;
+          req.session.msg = message;
         }
-        console.log("message.msg : ", message.msg)
-        console.log("req.session.message : ", req.session.message)
+        console.log("req.session.message : ", req.session.msg)
       })
     console.log(" message stocké !")
   })

@@ -18,21 +18,25 @@ body {
 
 }
 
-.navbar{
-    background-color: #fff1e64f;
+.navbar:not(.btn){
+    background-color: #1b1b1b6f;
     box-shadow: #0000008f 0px 0px 10px 0px;
 }
 nav input{
     padding: 10px;
     height: 30px;
+    margin: 2px auto 0px auto;
     border-radius: 2px;
     border: solid 1px rgb(211, 211, 211);
 }
 nav input:first-of-type{
-    width: 180px;
+    /* width: 180px; */
 }
 nav input:last-of-type {
-    width: 120px;
+    /* width: 120px; */
+}
+nav .btn{
+    background-color: #e2e2e2;
 }
 nav .lienSub, nav button, .btn{
     color: rgb(36, 36, 36);
@@ -40,7 +44,7 @@ nav .lienSub, nav button, .btn{
     padding: 5px 12px;
     border-radius: 2px;
     border: none;
-    margin: 0px 6px 0px 6px;
+    margin: 0 5px;
     box-shadow: rgba(0, 0, 0, 0.44) 1px 1px 4px 0px;
 }
 nav form {
@@ -69,7 +73,7 @@ nav form {
     padding: 2%;
 }
 .subscribe button{
-    margin: auto;
+    /* margin: auto; */
 }
 .intro {
     padding: 4% 4% 1% 4%;
@@ -172,7 +176,7 @@ button:hover, nav .lienSub:hover{
 }
 
 .header{
-    background-color: #ffffff66;
+    background-color: #fbfbfbbf;
     border-radius: 40px;
     margin: -40px 1% 1% 1%;
     box-shadow: #ffffffb8 0px 0px 30px 5px;
@@ -294,9 +298,21 @@ ul li:hover :has(li) {
     transition: all 0.25s;
 }
 
+/* -------------------------------- */
+/* --------  COMMENTAIRES  -------- */
+/* -------------------------------- */
+.time{
+    /* background: linear-gradient(#f8d450, #ffe4a0d4); */
+    padding: 0px 5px;
+    margin: 0px 7px 0px 0px;
+    font-weight: bolder;
+    color: #ff5656;
+    border-radius: 8px;
+    /* background: linear-gradient(#f8d450, #ffe4a0d4); */
+    background-color: #fff5d6;
+}
 .commentary {
     margin: 3% auto;
-    width: 700px;
 }
 .commentArea{
     background-color: rgb(255, 250, 244);
@@ -308,7 +324,6 @@ ul li:hover :has(li) {
     min-height: 20px;
     font-weight: 900;
     height: auto;
-    width: auto;
     margin: auto;
     vertical-align: middle;
     padding: 14px 21px;
@@ -327,7 +342,8 @@ ul li:hover :has(li) {
 }
 .commentary button {
     display: block;
-    margin: auto;
+    width: 100px;
+    margin: 15px auto 0 auto;
     background: linear-gradient(#ffd640, #ffa500);
     color: black;
     font-weight: bold;
@@ -347,13 +363,13 @@ footer p {
     top: 5%;
 }
 
-/* ---------------------------- */
-/* ------ MEDIA QUERRIES ------ */
-/* ---------------------------- */
+/* -------------------------------- */
+/* -------- MEDIA QUERRIES -------- */
+/* -------------------------------- */
 @media screen and (min-width: 415px) and (max-width: 1000px){
     #page {
         width: auto;
-        padding: 3% 2% 3% 2%;
+        padding: 5% 2% 3% 2%;
         margin: 3%;
     }
     ul li {

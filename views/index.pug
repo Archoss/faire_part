@@ -681,13 +681,16 @@ html(lang='fr')
           p Section commentaires working progress ;)
           h3 Coin des commentaires
           .commentArea
-            each m in msg
-              p= m.msg
+            if msg
+              each m in msg
+                p
+                  span.time #{moment()}
+                  span= m.msg
           form(action="/message" method='POST' )
-            .form-row.align-items-center
-              textarea.form-control#textinput(name="msg", msg=msg, placeholder="Ajoutez un commentaire", rows="2")
-              button.load.btn(disabled, type='submit')
-                span Envoyer
+            .align-items-center.input-group
+              textarea#textinput.form-control(name="msg", msg=msg, placeholder="Ajoutez un commentaire", rows="2")
+            button.load.btn(disabled, type='submit')
+              span Envoyer
 
       footer
         p - Tous droits confondus approuvu, lu, et urluberlu par Pierre -
@@ -701,28 +704,28 @@ script.
         $(".btn").attr('disabled', true)
       }
     })
-    $(".commentary .btn").click(function(e) {
-      console.log("|---| AJAX |---| ", $("#textinput").val())
-      //- event.preventDefault();
-      var msg = $("#textinput").val();
-      $.ajax({
-            url: "/message",
-            method: 'get',
-            dataType: 'json',
-            contentType: 'application/json',
-            data: {msg}
-      }).done(function(data) {
-            console.log(msg)
-          if(data === "Data found") {
-            console.log("data : ", data);
-            let saisieTextarea = $('#textinput').val();
-            const message = `<p>${data}</p>`
-            $('.commentArea').prepend(message)
-            $("#textinput").val("");
-            //- $(".btn").attr('disabled', true)
-          }else{
-            console.log("Mauvaise data", msg)
-          }
-      })                        
-    }) 
   })                        
+//-     $(".commentary .btn").click(function(e) {
+//-       console.log("|---| AJAX |---| ", $("#textinput").val())
+//-       //- event.preventDefault();
+//-       var msg = $("#textinput").val();
+//-       $.ajax({
+//-             url: "/messages",
+//-             method: 'get',
+//-             dataType: 'json',
+//-             contentType: 'application/json',
+//-             data: {msg}
+//-       }).done(function(data) {
+//-             console.log(msg)
+//-           if(data === "Data found") {
+//-             console.log("--- Data en AJAX : ", data);
+//-             let saisieTextarea = $('#textinput').val();
+//-             const message = `<p>${data}</p>`
+//-             $('.commentArea').prepend(message)
+//-             $("#textinput").val("");
+//-             //- $(".btn").attr('disabled', true)
+//-           }else{
+//-             console.log("Mauvaise data", msg)
+//-           }
+//-       })                        
+//-     }) 

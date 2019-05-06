@@ -9,11 +9,11 @@ body {
     font-family: 'Roboto Slab', serif;
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     /* background-color: rgb(255, 255, 255); */
-    background: linear-gradient(rgb(221, 221, 221), #5c5c5c);
+    /* background: linear-gradient(rgb(221, 221, 221), #5c5c5c); */
     /* background: linear-gradient(#525252, #c8c8c8); */
     background-position: center;
     /* background-repeat: no-repeat; */
-    /* background-image: url('https://atelier808.fr/14-tm_thickbox_default/plan-architecture.jpg') */
+    background-image: url('https://atelier808.fr/14-tm_thickbox_default/plan-architecture.jpg')
     /* background-image: url('https://www.ville-de-chauray.fr/images/articles/plan-en-rouleau.jpg'); */
 
 }

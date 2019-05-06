@@ -4,34 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res) {
-  const name = req.session.name;
-  if (req.session.user) {
-    const user = req.session.user;
-    req.db.collection('users').find().toArray((err, name) => {
-      res.render('index', {
-        name: name,
-        user: user,
-      });
-    })
-  }
-  const msg = req.session.msg;
-  req.db.collection('messages').find().toArray((err, msg) => {
-    console.log("TEST msg render")
-    res.render('index', {
-      msg: msg
-    },
-      err => {
-        if (err) {
-          throw err;
-        } else {
-          req.session.msg = msg;
-        }
-        console.log("req.session.msg : ", req.session.msg)
-      });
-
-  });
-  console.log("req.session.user ==> ", req.session.user);
-  console.log("req.session ==> ", req.session);
+  res.redirect('/accueil');
 })
   .post('/signUp', function (req, res) {
     // Nous utilisons le schéma Piscine
@@ -74,7 +47,7 @@ router.get('/', function (req, res) {
           })
       }
     })
-    console.log("req.session ==> ", req.session);
+    console.log("POST('/signup') - req.session ==> ", req.session);
     console.log('--- --- Profil ajouté à la base de données--- ---')
   })
   .post('/signIn', function (req, res) {
@@ -112,7 +85,15 @@ router.get('/', function (req, res) {
     req.db.collection('messages').find().toArray((err, msg) => {
       console.log("/message : ", msg || 'Aucun message')
       res.render('index', {
-        msg: msg
+        msg: msg,
+        moment: function () {
+          var dateNow = new Date();
+          var dd = dateNow.getDate();
+          var monthSingleDigit = dateNow.getMonth() + 1,
+            mm = monthSingleDigit < 10 ? '0' + monthSingleDigit : monthSingleDigit;
+          var yy = dateNow.getFullYear().toString().substr(2);
+          return (mm + '/' + dd + '/' + yy);
+        }
       })
       // res.json(msg)
     })
@@ -125,9 +106,10 @@ router.get('/', function (req, res) {
         } else {
           req.session.msg = message;
         }
-        console.log("req.session.message : ", req.session.msg)
+        console.log("post('/message') : ", req.session.msg)
       })
     console.log(" message stocké !")
+    res.redirect('/accueil');
   })
 
 module.exports = router;

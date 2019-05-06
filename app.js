@@ -38,6 +38,7 @@ app.use(
 );
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+
 // -----------------------------------------------
 // ------------------  ROUTES  -------------------
 // -----------------------------------------------
@@ -54,21 +55,22 @@ app.get('/accueil', function (req, res) {
         })
     } else {
         console.log(`/accueil`)
-        const msg = req.session.msg;
-        req.db.collection('messages').find().toArray((err, msg) => {
-            res.render('index', {
-                msg: msg,
-                moment: function () {
-                    var dateNow = new Date();
-                    var dd = dateNow.getDate();
-                    var monthSingleDigit = dateNow.getMonth() + 1,
-                        mm = monthSingleDigit < 10 ? '0' + monthSingleDigit : monthSingleDigit;
-                    var yy = dateNow.getFullYear().toString().substr(2);
-                    return (mm + '/' + dd + '/' + yy);
-                }
-            })
-        })
+        console.log(`req.session.msg : `, req.session.msg)
     }
+    const msg = req.session.msg;
+    req.db.collection('messages').find().toArray((err, msg) => {
+        res.render('index', {
+            msg: msg,
+            moment: function () {
+                var dateNow = new Date();
+                var dd = dateNow.getDate();
+                var monthSingleDigit = dateNow.getMonth() + 1,
+                    mm = monthSingleDigit < 10 ? '0' + monthSingleDigit : monthSingleDigit;
+                var yy = dateNow.getFullYear().toString().substr(2);
+                return (mm + '/' + dd + '/' + yy);
+            }
+        })
+    })
 });
 app.get("/sub", function (req, res) {
     res.render('sub');
@@ -119,6 +121,7 @@ app.get("/message", function (req, res) {
         })
         // res.json(msg)
     }
+
         // , function (err, msg) {
         //     console.log("Le super message en ajax : ", msg)
         //     if (msg) {

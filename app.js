@@ -55,7 +55,7 @@ app.get('/accueil', function (req, res) {
         })
     } else {
         console.log(`/accueil`)
-        console.log(`req.session.msg : `, req.session.msg)
+        console.log(`req.session.msg : `, req.session.msg || " Pas connecté")
     }
     const msg = req.session.msg;
     req.db.collection('messages').find().toArray((err, msg) => {
@@ -92,14 +92,19 @@ app.get("/signUp", function (req, res) {
     // console.log("req.session ==> ", req.session);
 });
 app.get("/signIn", function (req, res) {
-    const user = req.session.user;
-    const name = req.session.user.name;
-    req.db.collection('users').find().toArray((err, name) => {
-        res.render('index', {
-            name: name,
-            user: user,
-        });
-    });
+    console.log("-- SIGNIN --")
+    // const user = req.session.user;
+    // const name = req.session.user.name;
+    // req.db.collection('users').find().toArray((err, name) => {
+    //     res.render('index', {
+    //         name: name,
+    //         user: user,
+    //     });
+    // });
+    const msg = req.session.msg;
+    console.log("msg : ", msg)
+
+
     // console.log("req.session.user ==> ", req.session.user);
 });
 app.get("/message", function (req, res) {
@@ -120,20 +125,20 @@ app.get("/message", function (req, res) {
             }
         })
         // res.json(msg)
-    }
+    })
 
-        // , function (err, msg) {
-        //     console.log("Le super message en ajax : ", msg)
-        //     if (msg) {
-        //         console.log('GG !!!!!!!!!!!!!!!!!')
-        //         res.json('Data found');
-        //     } else {
-        //         console.log('PROUT !!!!!!!!!!!!!!!!')
-        //         res.json('Erreur')
-        //     }
-        //     console.log("mdr")
-        // }
-    )
+
+    // , function (err, msg) {
+    //     console.log("Le super message en ajax : ", msg)
+    //     if (msg) {
+    //         console.log('GG !!!!!!!!!!!!!!!!!')
+    //         res.json('Data found');
+    //     } else {
+    //         console.log('PROUT !!!!!!!!!!!!!!!!')
+    //         res.json('Erreur')
+    //     }
+    //     console.log("mdr")
+    // }
     console.log("msg : ", msg)
     console.log("req.session.msg ==> ", req.session.msg);
 });
@@ -141,6 +146,7 @@ app.get("/message", function (req, res) {
 
 // })
 app.get("/logout", function (req, res) {
+    console.log('Déconnecté')
     res.redirect("/accueil");
     req.session.destroy();
 });

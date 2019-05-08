@@ -72,9 +72,11 @@ router.get('/', function (req, res) {
         // bcrypt.hash(req.body.password, 10, function (err, hash) {
         //   // Store hash in database
         // });
+
       }
     })
     console.log('--- --- Connexion --- ---')
+    // res.redirect("/accueil");
   })
   .post('/message', function (req, res) {
     // console.log("*******************************")

@@ -40,10 +40,7 @@ app.use(
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 // ----------------------------------------------------------------------------
-// ----------------------------------------------------------------------------
-// ----------------------------------------------------------------------------
-// ----------------------------------------------------------------------------
-// ----------------------------------------------------------------------------
+// -----------------------  LE SUPER GROS PATE DE DOMI  ------------------------
 function findMsg(req) {
     return new Promise((resolve, reject) => {
         req.db.collection('messages').find(
@@ -55,15 +52,10 @@ function findMsg(req) {
             },
         ).toArray((error, documents) => {
             if (error) {
-                console.log('-------------------------------------------------------------');
-                console.log('readFriends - Erreur de lecture dans la collection \'members\' : ', error);
-                console.log('-------------------------------------------------------------');
                 reject(error)
             };
 
             resolve(documents);
-
-            console.log('documents in Array: ', documents)
         });
     });
 }
@@ -87,20 +79,17 @@ app.get('/accueil', function (req, res) {
         console.log(`req.session.msg : `, req.session.msg)
     }
 
-
-    const msg = req.session.msg;
-    const moment = req.session.moment;
-
-
     findMsg(req)
         .then((documents) => {
-            console.log("documents : ", documents)
+            // console.log("documents : ", documents)
             res.render('index', {
                 allMsg: documents
             })
-
         })
         .catch((error) => {
+            console.log('-------------------------------------------------------------');
+            console.log('readFriends - Erreur de lecture dans la collection \'members\' : ', error);
+            console.log('-------------------------------------------------------------');
             throw error
         })
 

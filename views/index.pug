@@ -680,7 +680,7 @@ html(lang='fr')
         a#reset.reset(href="javascript:window.location.reload()") Recommencer
 
         .commentary
-          p Section commentaires working progress ;)
+          //- p Section commentaires working progress ;)
           h3 Coin des commentaires
           .commentArea
             if allMsg
@@ -691,6 +691,7 @@ html(lang='fr')
           form(action="/message" method='POST' )
             .align-items-center.input-group
               textarea#textinput.form-control(name="msg", msg=msg, placeholder="Ajoutez un commentaire", rows="2")
+            input#pseudo.pseudo(name="pseudo", placeholder="Signature ?") 
             button.load.btn(disabled, type='submit')
               span Envoyer
 

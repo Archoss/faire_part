@@ -23,7 +23,10 @@ body {
 }
 
 .navbar:not(.btn){
-    background-color: #4141418e;
+    position: fixed;
+    width:-webkit-fill-available;
+    top: 0;
+    background-color: #414141a3;
     box-shadow: #000000 0px -1px 8px 2px;
 }
 nav input{
@@ -75,7 +78,7 @@ nav form {
 }
 #page {
     padding: 2% 2% 1% 2%;
-    margin: 2% auto 5px;
+    margin: 8% auto 5px;
     width: 1030px;
     /* border-radius: 8px; */
     background-color: #ffdfb5bf;
@@ -207,10 +210,10 @@ button:hover, nav .lienSub:hover{
     box-shadow: #ffffffb8 0px 0px 30px 5px; */
 
     font-weight: bold;
-    background-color: #ffdfac7d;
+    background-color: #ffd99d7d;
     /* border-radius: 40px; */
     margin: -40px 1% 3% 1%;
-    box-shadow: #ffdfac7d 0px 0px 20px 20px;
+    box-shadow: #ffd99d7d 0px 0px 20px 20px;
 }
 
 h1:not(.hUnSub){
@@ -356,7 +359,8 @@ ul li:hover :has(li) {
     /* border: solid #ff5d00b5 1px; */
     letter-spacing: 1px;
     font-size: 0.8rem;
-    height: 300px;
+    height: 0px;
+    max-height: 250px;
     font-weight: 900;
     /* margin: auto; */
     /* text-align: center; */
@@ -388,15 +392,24 @@ ul li:hover :has(li) {
     border-radius: 10px;
 }
 
+.commentary input {
+    margin: 5px;
+    padding: 1px 0 1px 10px;
+    /* text-align: center; */
+    border: #c3c3c3 solid 1px;
+    border-radius: 7px;
+    width: 200px;
+}
 footer p {
-    padding: 1%;
-    color: #ffffff;
+    padding: 2%;
+    color: #989898;
     position: relative;
     bottom: 0;
+    letter-spacing: 0.1em;
     text-align: center;
-    font-weight: 700;
-    font-size: 0.7rem;
-    text-shadow: 2px 1px 2px #000000;
+    /* font-weight: 700; */
+    font-size: 0.6rem;
+    text-shadow: 1px 1px 1px #000000;
     top: 5%;
 }
 
@@ -422,7 +435,7 @@ footer p {
 @media screen and (max-width: 414px){
     #page {
         width: auto;
-        padding: 9% 3% 4% 3%;
+        padding: 22% 3% 4% 3%;
         margin: 0px;
         border-radius: 0px;
     }

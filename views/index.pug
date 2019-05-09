@@ -14,6 +14,8 @@ html(lang='fr')
   body
     container
       include includes/navBar.pug
+      if error
+        p.errorMessage - Mauvais pseudo ou mot de passe -
       #page
         .header  
           h1 Avez vous vraiment mérité votre 
@@ -681,10 +683,10 @@ html(lang='fr')
           p Section commentaires working progress ;)
           h3 Coin des commentaires
           .commentArea
-            if msg
-              each m in msg
+            if allMsg
+              each m in allMsg
                 p
-                  span.time #{moment()}
+                  span.time= m.msgMoment
                   span= m.msg
           form(action="/message" method='POST' )
             .align-items-center.input-group

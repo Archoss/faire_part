@@ -13,9 +13,9 @@ body {
     /* background: linear-gradient(#525252, #c8c8c8); */
     /* background-position: center; */
     background-attachment: fixed;
-    background-position: left;
+    background-position: right;
     background-repeat: initial;
-    background-size: contain;
+    background-size: cover;
     background-image: url(../img/backgroundPlan.jpg);
     /* background-image: url(https://atelier808.fr/14-tm_thickbox_default/plan-architecture.jpg); */
     /* background-image: url(https://www.ville-de-chauray.fr/images/articles/plan-en-rouleau.jpg); */
@@ -23,7 +23,7 @@ body {
 }
 
 .navbar:not(.btn){
-    background-color: #4141416f;
+    background-color: #4141418e;
     box-shadow: #000000 0px -1px 8px 2px;
 }
 nav input{
@@ -62,7 +62,17 @@ nav .lienSub, nav button, .btn{
 nav form {
     margin-left: auto;
 }
-
+.errorMessage{
+    text-shadow: black 1px 1px 1px;
+    background-color: #bbbbbbc2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: fit-content;
+    padding: 6px;
+    color: #ff5656;
+    margin: 10px auto;
+    text-align: center;
+}
 #page {
     padding: 2% 2% 1% 2%;
     margin: 2% auto 5px;
@@ -384,8 +394,9 @@ footer p {
     position: relative;
     bottom: 0;
     text-align: center;
-    font-size: 0.6rem;
-    text-shadow: 1px 0px 4px #000000;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-shadow: 2px 1px 2px #000000;
     top: 5%;
 }
 

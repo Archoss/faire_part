@@ -1,5 +1,6 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const moment = require('moment');
 // let shortId = require('short-id')
 
 /* GET home page. */
@@ -68,11 +69,18 @@ router.get('/', function (req, res) {
         req.session.user = user;
         res.render("index", {
           user: user,
+          error: false
         });
         // bcrypt.hash(req.body.password, 10, function (err, hash) {
         //   // Store hash in database
         // });
 
+      } else {
+        console.log("Mauvais pseudo ou mot de passe")
+        res.render("index", {
+          user: user,
+          error: true
+        });
       }
     })
     console.log('--- --- Connexion --- ---')
@@ -82,20 +90,14 @@ router.get('/', function (req, res) {
     // console.log("*******************************")
     // console.log("req.body.msg : ", req.body.msg)
     let message = {
-      msg: req.body.msg.trim()
+      msg: req.body.msg.trim(),
+      msgMoment: moment().calendar()
     }
     req.db.collection('messages').find().toArray((err, msg) => {
-      console.log("/message : ", msg || 'Aucun message')
+      console.log("/message : ", msg)
       res.render('index', {
         msg: msg,
-        moment: function () {
-          var dateNow = new Date();
-          var dd = dateNow.getDate();
-          var monthSingleDigit = dateNow.getMonth() + 1,
-            mm = monthSingleDigit < 10 ? '0' + monthSingleDigit : monthSingleDigit;
-          var yy = dateNow.getFullYear().toString().substr(2);
-          return (mm + '/' + dd + '/' + yy);
-        }
+        moment: message.msgMoment
       })
       // res.json(msg)
     })
@@ -107,6 +109,7 @@ router.get('/', function (req, res) {
           throw err;
         } else {
           req.session.msg = message;
+          req.session.moment = message.msgMoment;
         }
         console.log("post('/message') : ", req.session.msg)
       })

@@ -5,7 +5,8 @@ const express = require("express"),
     path = require("path"),
     bodyParser = require("body-parser"),
     expressMongoDb = require("express-mongo-db"),
-    MongoStore = require("connect-mongo")(session)
+    MongoStore = require("connect-mongo")(session),
+    moment = require('moment')
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -38,6 +39,34 @@ app.use(
 );
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+function findMsg(req) {
+    return new Promise((resolve, reject) => {
+        req.db.collection('messages').find(
+            {},
+            {
+                msg: 1,
+                msgMoment: 1,
+                _id: 0,
+            },
+        ).toArray((error, documents) => {
+            if (error) {
+                console.log('-------------------------------------------------------------');
+                console.log('readFriends - Erreur de lecture dans la collection \'members\' : ', error);
+                console.log('-------------------------------------------------------------');
+                reject(error)
+            };
+
+            resolve(documents);
+
+            console.log('documents in Array: ', documents)
+        });
+    });
+}
 
 // -----------------------------------------------
 // ------------------  ROUTES  -------------------
@@ -55,31 +84,47 @@ app.get('/accueil', function (req, res) {
         })
     } else {
         console.log(`/accueil`)
-        console.log(`req.session.msg : `, req.session.msg || " Pas connecté")
+        console.log(`req.session.msg : `, req.session.msg)
     }
+
+
     const msg = req.session.msg;
-    req.db.collection('messages').find().toArray((err, msg) => {
-        res.render('index', {
-            msg: msg,
-            moment: function () {
-                var dateNow = new Date();
-                var dd = dateNow.getDate();
-                var monthSingleDigit = dateNow.getMonth() + 1,
-                    mm = monthSingleDigit < 10 ? '0' + monthSingleDigit : monthSingleDigit;
-                var yy = dateNow.getFullYear().toString().substr(2);
-                return (mm + '/' + dd + '/' + yy);
-            }
+    const moment = req.session.moment;
+
+
+    findMsg(req)
+        .then((documents) => {
+            console.log("documents : ", documents)
+            res.render('index', {
+                allMsg: documents
+            })
+
         })
-    })
+        .catch((error) => {
+            throw error
+        })
+
 });
+
+// -------------
+// ---  SUB  ---
+// -------------
 app.get("/sub", function (req, res) {
     res.render('sub');
     console.log(`/sub`)
 });
+
+// ---------------------
+// ---  GIGOTBITUME  ---
+// ---------------------
 app.get('/gigotBitume', function (req, res) {
     res.render('gigotBitume');
     console.log(`/gigotBitume`)
 });
+
+// ----------------
+// ---  SIGNUP  ---
+// ----------------
 app.get("/signUp", function (req, res) {
     const user = req.session.user;
     const name = req.session.user.name;
@@ -91,6 +136,10 @@ app.get("/signUp", function (req, res) {
     })
     // console.log("req.session ==> ", req.session);
 });
+
+// ----------------
+// ---  SIGNIN  ---
+// ----------------
 app.get("/signIn", function (req, res) {
     console.log("-- SIGNIN --")
     // const user = req.session.user;
@@ -107,22 +156,20 @@ app.get("/signIn", function (req, res) {
 
     // console.log("req.session.user ==> ", req.session.user);
 });
+
+// -----------------
+// ---  MESSAGE  ---
+// -----------------
 app.get("/message", function (req, res) {
     const msg = req.session.msg;
+    const moment = req.session.moment;
     console.log("msg : ", msg)
     // console.log(req); console.log(res);
     req.db.collection('messages').find().toArray((err, msg) => {
         console.log("MSG : ", msg)
         res.render('index', {
             msg: msg,
-            moment: function () {
-                var dateNow = new Date();
-                var dd = dateNow.getDate();
-                var monthSingleDigit = dateNow.getMonth() + 1,
-                    mm = monthSingleDigit < 10 ? '0' + monthSingleDigit : monthSingleDigit;
-                var yy = dateNow.getFullYear().toString().substr(2);
-                return (mm + '/' + dd + '/' + yy);
-            }
+            moment: moment
         })
         // res.json(msg)
     })

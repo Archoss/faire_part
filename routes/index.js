@@ -92,7 +92,7 @@ router.get('/', function (req, res) {
     let message = {
       msg: req.body.msg.trim(),
       pseudo: req.body.pseudo.trim(),
-      msgMoment: moment().fromNow()
+      msgMoment: moment().format("DD/MM")
     }
     if ((message.pseudo == "") || (message.pseudo == null)) {
       console.log("###-----   ANONYMOUS   -----###")

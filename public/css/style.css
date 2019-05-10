@@ -184,7 +184,8 @@ nav form {
 .start {
     cursor: pointer;
     margin: 2% 0 1% 44%;
-    background-color: #ffb724;
+    background: linear-gradient(#ffd640, #ffa500);
+    /* background-color: #ffb724; */
     padding: 8px 19px;
     border: none;
     border-radius: 5px;
@@ -200,6 +201,13 @@ button:hover, nav .lienSub:hover{
     box-shadow: none;
     transition: all 0.5s;
 }
+button:not(:hover){
+    background: linear-gradient(#ffd640, #ffa500);
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(122, 82, 0, 0.69) 2px 2px 10px 0px;
+    transition: all 0.5s;
+}
+
 .btn.disabled, .btn:disabled {
     opacity: 0.35;
 }
@@ -339,14 +347,17 @@ ul li:hover :has(li) {
 /* -------------------------------- */
 .time{
     /* background: linear-gradient(#f8d450, #ffe4a0d4); */
-    padding: 2px 6px;
-    vertical-align: middle;
+    padding: 2px 5px;
+    vertical-align: text-top;
     margin: 0px 8px 0px 0px;
     font-weight: bolder;
-    color: #ff5656;
-    border-radius: 5px;
+    color: #e2e2e2d4;
+    border-radius: 4px;
     /* background: linear-gradient(#f8d450, #ffe4a0d4); */
-    background-color: #fff5d6;
+    background-color: #737374;
+}
+.pseudo{
+    color: #ffb724;
 }
 .commentary {
     margin: 5% auto;
@@ -371,10 +382,9 @@ ul li:hover :has(li) {
 .commentArea p{
     margin: 7px auto;
     padding: 0px 10px 0px 0px;
-    background-color: #ffe195a8;
+    background-color: #fff5d6;
     width: max-content;
     border-radius: 6px;
-    text-align: end;
 }
 .commentary textarea {
     margin: 10px auto;
@@ -383,22 +393,32 @@ ul li:hover :has(li) {
 }
 .commentary button {
     display: block;
-    width: 100px;
+    width: 110px;
     margin: 15px auto 0 auto;
     background: linear-gradient(#ffd640, #ffa500);
     color: black;
     font-weight: bold;
-    padding: 2px 14px;
+    padding: 4px 14px;
     font-size: 0.9rem;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .commentary input {
-    margin: 8px 0;
+    margin: 8px 9px 8px 0px;
     padding: 1px 0 1px 10px;
-    border: #c3c3c3 solid 1px;
+    border: #c5c4c4 solid 1px;
+    background-color: #ffffffc2;
     border-radius: 7px;
-    width: 200px;
+    width: 250px;
+    /* background-color: gainsboro; */
+}
+.conseil {
+    color: #484747;
+    font-size: 0.8em;
+    text-transform: initial;
+    font-style: italic;
+    /* letter-spacing: 1px; */
+    /* font-weight: bold; */
 }
 footer p {
     padding: 2%;

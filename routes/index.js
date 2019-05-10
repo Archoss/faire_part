@@ -96,8 +96,8 @@ router.get('/', function (req, res) {
     }
     if ((message.pseudo == "") || (message.pseudo == null)) {
       console.log("###-----   ANONYMOUS   -----###")
-      message.pseudo = "Anonymous"
-      // message.pseudo = "Mr.Smith"
+      // message.pseudo = "Anonymous"
+      message.pseudo = "Mr.Smith"
     }
     console.log("message.pseudo ==> ", message.pseudo)
     // req.db.collection('messages').find().toArray((err, msg) => {

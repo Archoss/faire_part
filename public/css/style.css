@@ -345,6 +345,12 @@ ul li:hover :has(li) {
 /* -------------------------------- */
 /* --------  COMMENTAIRES  -------- */
 /* -------------------------------- */
+.help {
+    font-size: 0.9em;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+}
 .time{
     /* background: linear-gradient(#f8d450, #ffe4a0d4); */
     padding: 2px 5px;
@@ -385,6 +391,7 @@ ul li:hover :has(li) {
     padding: 0px 10px 0px 0px;
     background-color: #fff5d6;
     width: max-content;
+    max-width: 500px;
     border-radius: 6px;
 }
 .commentary textarea {

@@ -387,11 +387,12 @@ ul li:hover :has(li) {
     /* padding: 10px 10px; */
 }
 .commentArea p{
+    text-align: center;
     margin: 7px auto;
     padding: 0px 10px 0px 0px;
     background-color: #fff5d6;
     width: max-content;
-    max-width: 500px;
+    max-width: 780px;
     border-radius: 6px;
 }
 .commentary textarea {
@@ -453,6 +454,10 @@ footer p {
     ul li {
         margin: 3% 0 3% 0;
     }
+    .commentArea p{
+        max-width: 574px;
+        text-align: center;
+    }
     footer p{
         margin-top: 0%;
     }
@@ -460,7 +465,7 @@ footer p {
         margin-left: 40%;
     }
 }
-@media screen and (max-width: 414px){
+@media screen and (min-width: 321px) and (max-width: 414px){
     #page {
         width: auto;
         padding: 10% 3% 4% 3%;
@@ -481,6 +486,10 @@ footer p {
     .commentArea {
         font-size: xx-small;
     }
+    .commentArea p{
+        max-width: 305px;
+        text-align: center;
+    }
     .commentary input {
         width: 100%;
     }
@@ -494,6 +503,13 @@ footer p {
         margin-top: 4%;
     }
 }
+@media screen and (max-width: 320px){
+    .commentArea p{
+        max-width: 235px;
+        text-align: center;
+    }
+}
+
 /* --------------------------- */
 /* ------ LOADER.io CSS ------ */
 /* --------------------------- */

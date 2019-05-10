@@ -91,16 +91,24 @@ router.get('/', function (req, res) {
     // console.log("req.body.msg : ", req.body.msg)
     let message = {
       msg: req.body.msg.trim(),
-      msgMoment: moment().calendar()
+      pseudo: req.body.pseudo.trim(),
+      msgMoment: moment().fromNow()
     }
-    req.db.collection('messages').find().toArray((err, msg) => {
-      console.log("/message : ", msg)
-      res.render('index', {
-        msg: msg,
-        moment: message.msgMoment
-      })
-      // res.json(msg)
-    })
+    if ((message.pseudo == "") || (message.pseudo == null)) {
+      console.log("###-----   ANONYMOUS   -----###")
+      message.pseudo = "Anonymous"
+      // message.pseudo = "Mr.Smith"
+    }
+    console.log("message.pseudo ==> ", message.pseudo)
+    // req.db.collection('messages').find().toArray((err, msg) => {
+    //   console.log("/message : ", msg)
+    //   res.render('index', {
+    //     msg: msg,
+    //     pseudo: message.pseudo,
+    //     moment: message.msgMoment,
+    //   })
+    //   // res.json(msg)
+    // })
     // /---/  MONGO  /---/ //
     req.db.collection('messages').insertOne(
       message,

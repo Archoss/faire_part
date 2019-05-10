@@ -687,12 +687,15 @@ html(lang='fr')
               each m in allMsg
                 p
                   span.time= m.msgMoment
-                  span= m.msg
+                    span  -  
+                    span.pseudo= m.pseudo
+                    span  :
+                  span.comment= m.msg
           form(action="/message" method='POST' )
             .align-items-center.input-group
               textarea#textinput.form-control(name="msg", msg=msg, placeholder="Ajoutez un commentaire", rows="2")
             input#pseudo.pseudo(name="pseudo", placeholder="Signature ?") 
-            button.load.btn(disabled, type='submit')
+            button#monBoutton.load.btn(disabled, type='submit')
               span Envoyer
 
       footer
@@ -700,6 +703,18 @@ html(lang='fr')
 
 script.
   $('document').ready(function() {
+    //- $("#monBoutton").click(function(){
+    //-   if($("#pseudo").val() !== "") {
+    //-     var saisie = $("#pseudo").val();
+    //-     console.log($("#pseudo").val())
+    //-     var pseudoPrepend = `<span>${saisie}</span>`;
+    //-     $('.commentArea .comment').prepend(pseudoPrepend)
+    //-   }else{
+    //-     var AnonymousPrepend = `<span>Mr.Smith</span>`;
+    //-     $('.commentArea .comment').prepend(AnonymousPrepend)
+    //-   }
+    //- })
+
     $("#textinput").keyup(function(){
       if($("#textinput").val() !== "") {
         $(".commentary .btn").attr('disabled', false)

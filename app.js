@@ -47,6 +47,7 @@ function findMsg(req) {
             {},
             {
                 msg: 1,
+                pseudo: 1,
                 msgMoment: 1,
                 _id: 0,
             },
@@ -64,20 +65,20 @@ function findMsg(req) {
 // ------------------  ROUTES  -------------------
 // -----------------------------------------------
 app.get('/accueil', function (req, res) {
-    if (req.session.user) {
-        const user = req.session.user;
-        const name = user.name;
-        req.db.collection('users').find().toArray((err, name) => {
-            res.render('index', {
-                name: name,
-                user: user,
-            });
-            console.log(`/accueil connecté en tant que : ${user.name}`)
-        })
-    } else {
-        console.log(`/accueil`)
-        console.log(`req.session.msg : `, req.session.msg)
-    }
+    // if (req.session.user) {
+    //     const user = req.session.user;
+    //     const name = user.name;
+    //     req.db.collection('users').find().toArray((err, name) => {
+    //         res.render('index', {
+    //             name: name,
+    //             user: user,
+    //         });
+    //         console.log(`/accueil connecté en tant que : ${user.name}`)
+    //     })
+    // } else {
+    //     console.log(`/accueil`)
+    //     console.log(`req.session.msg : `, req.session.msg)
+    // }
 
     findMsg(req)
         .then((documents) => {

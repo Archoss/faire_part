@@ -339,11 +339,12 @@ ul li:hover :has(li) {
 /* -------------------------------- */
 .time{
     /* background: linear-gradient(#f8d450, #ffe4a0d4); */
-    padding: 0px 5px;
-    margin: 0px 7px 0px 0px;
+    padding: 2px 6px;
+    vertical-align: middle;
+    margin: 0px 8px 0px 0px;
     font-weight: bolder;
     color: #ff5656;
-    border-radius: 8px;
+    border-radius: 5px;
     /* background: linear-gradient(#f8d450, #ffe4a0d4); */
     background-color: #fff5d6;
 }
@@ -352,7 +353,7 @@ ul li:hover :has(li) {
 }
 .commentArea{
     overflow: auto;
-    background-color: rgba(49, 49, 49, 0.43);
+    background-color: rgba(49, 49, 49, 0.327);
     color: #676767;
     /* box-shadow: inset #ffeed5 0px 0px 3px 6px; */
     border-radius: 4px;
@@ -369,8 +370,8 @@ ul li:hover :has(li) {
 }
 .commentArea p{
     margin: 7px auto;
-    padding: 2px 8px;
-    background-color: #ffeab3d4;
+    padding: 0px 10px 0px 0px;
+    background-color: #ffe195a8;
     width: max-content;
     border-radius: 6px;
     text-align: end;
@@ -393,9 +394,8 @@ ul li:hover :has(li) {
 }
 
 .commentary input {
-    margin: 5px;
+    margin: 8px 0;
     padding: 1px 0 1px 10px;
-    /* text-align: center; */
     border: #c3c3c3 solid 1px;
     border-radius: 7px;
     width: 200px;

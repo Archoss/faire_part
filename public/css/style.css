@@ -352,21 +352,18 @@ ul li:hover :has(li) {
     text-align: center;
 }
 .time{
-    /* background: linear-gradient(#f8d450, #ffe4a0d4); */
     padding: 2px 5px;
     vertical-align: text-top;
-    margin: 0px 8px 0px 0px;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     color: #e2e2e2d4;
     border-radius: 4px;
-    /* background: linear-gradient(#f8d450, #ffe4a0d4); */
     background-color: #737374;
 }
 .pseudo{
     color: #ffb724;
 }
 .commentary {
-    width: 85%;
+    width: 100%;
     margin: 5% auto;
 }
 .commentArea{
@@ -387,13 +384,19 @@ ul li:hover :has(li) {
     /* padding: 10px 10px; */
 }
 .commentArea p{
-    text-align: center;
-    margin: 7px auto;
+    box-shadow: 2px 2px 5px #000000a1;
+    margin: 7px 8px;
     padding: 0px 10px 0px 0px;
     background-color: #fff5d6;
-    width: max-content;
-    max-width: 780px;
+    width: fit-content;
+    max-width: 100%;
     border-radius: 6px;
+}
+.comment{
+    position: relative;
+    text-align: center;
+    left: 5px;
+
 }
 .commentary textarea {
     margin: 10px auto;
@@ -445,7 +448,7 @@ footer p {
 /* -------------------------------- */
 /* -------- MEDIA QUERRIES -------- */
 /* -------------------------------- */
-@media screen and (min-width: 415px) and (max-width: 1000px){
+@media screen and (min-width: 768px) and (max-width: 1000px){
     #page {
         width: auto;
         padding: 5% 2% 3% 2%;
@@ -455,8 +458,26 @@ footer p {
         margin: 3% 0 3% 0;
     }
     .commentArea p{
-        max-width: 574px;
-        text-align: center;
+        max-width: 100%;
+    }
+    footer p{
+        margin-top: 0%;
+    }
+    button{
+        margin-left: 40%;
+    }
+}
+@media screen and (min-width: 415px) and (max-width: 767px){
+    #page {
+        width: auto;
+        padding: 5% 2% 3% 2%;
+        margin: 10% 3% 3% 3%;
+    }
+    ul li {
+        margin: 3% 0 3% 0;
+    }
+    .commentArea p{
+        max-width: 100%;
     }
     footer p{
         margin-top: 0%;
@@ -487,11 +508,16 @@ footer p {
         font-size: xx-small;
     }
     .commentArea p{
-        max-width: 305px;
-        text-align: center;
+        max-width: 100%;
+    }
+    .commentArea .comment{
+        padding: 2px;
     }
     .commentary input {
         width: 100%;
+    }
+    .commentary{
+        width: 85%;
     }
     .conseil {
         display: block;
@@ -504,9 +530,23 @@ footer p {
     }
 }
 @media screen and (max-width: 320px){
+    #page {
+        width: auto;
+        padding: 10% 3% 4% 3%;
+        margin: 16% 2% 0% 2%;
+    }
+    .start{
+        margin: 2% 0 1% 32%;
+    }
     .commentArea p{
         max-width: 235px;
-        text-align: center;
+        /* text-align: center; */
+    }
+    .commentArea .time{
+        text-align: left;
+    }
+    .commentArea {
+        font-size: xx-small;
     }
 }
 
